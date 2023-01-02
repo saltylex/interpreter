@@ -3,7 +3,7 @@ package Model.State;
 
 import Model.DataStructures.*;
 import Model.Exceptions.EvaluationException;
-import Model.Exceptions.ExecutionError;
+import Model.Exceptions.ExecutionException;
 import Model.Exceptions.StackException;
 import Model.Statements.IStatement;
 import Model.Values.IValue;
@@ -35,8 +35,6 @@ public class PrgState {
         exeStack.push(originalProgram);
         this.id = newId();
     }
-
-
 
     // ADDED FOR MULTITHREADING AND MANAGING THE IDs OF THE STATE
     private static Integer newId() {
@@ -80,25 +78,16 @@ public class PrgState {
         return heap;
     }
 
-    public PrgState oneStep() throws StackException, ExecutionError, EvaluationException {
-
-        IStatement top = exeStack.pop();
-        return top.execute(this);
-
-    }
-
-    public boolean isCompleted() {
-        return exeStack.isEmpty();
+    public boolean isNotCompleted() {
+        return !exeStack.isEmpty();
     }
 
     // ADDED FOR MULTITHREADING
-    public void executeOneStep() throws EvaluationException, ExecutionError, StackException {
+    public PrgState oneStep() throws EvaluationException, ExecutionException, StackException {
         if (exeStack.isEmpty())
-            throw new ExecutionError("Exe stack is empty!");
+            throw new ExecutionException("Exe stack is empty!");
         IStatement currentStatement = exeStack.pop(); // get first statement
-        currentStatement.execute(this); // execute the statement
-
-        System.out.println(this.toString() + "\n");// display state after execution
+        return currentStatement.execute(this); // execute the statement
     }
 
     public String executionStackToString() {
@@ -145,7 +134,7 @@ public class PrgState {
         StringBuilder heapStringBuilder = new StringBuilder();
 
         for (Integer position : heap.getContent().keySet()) {
-            heapStringBuilder.append(position + " -> " + heap.getContent().get(position).toString() + "\n");
+            heapStringBuilder.append(position).append(" -> ").append(heap.getContent().get(position).toString()).append("\n");
         }
 
         return heapStringBuilder.toString();
@@ -157,4 +146,12 @@ public class PrgState {
         return String.format("ID: %d\n\n~ EXECUTION STACK ~\n%s\n~ SYMBOL TABLE ~\n%s\n~ OUTPUT ~\n%s\n~ FILE TABLE ~\n%s\n~ HEAP ~\n%s\n", id, executionStackToString(), symTableToString(), outToString(), fileTableToString(), heapToString());
     }
 
+
+    @Deprecated
+    public PrgState oneStepSingleThreaded() throws StackException, ExecutionException, EvaluationException {
+
+        IStatement top = exeStack.pop();
+        return top.execute(this);
+
+    }
 }

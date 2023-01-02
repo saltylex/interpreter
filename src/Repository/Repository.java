@@ -1,5 +1,6 @@
 package Repository;
 
+import Model.Exceptions.ExecutionException;
 import Model.State.PrgState;
 
 import java.io.BufferedWriter;
@@ -9,7 +10,7 @@ import java.io.PrintWriter;
 import java.util.LinkedList;
 import java.util.List;
 
-public class Repository implements IRepository {
+public class Repository implements IRepository{
     private List<PrgState> programStates;
     private final int currentPosition;
     private final String logFilePath;
@@ -20,12 +21,16 @@ public class Repository implements IRepository {
         logFilePath = lfp;
     }
 
-    /* DEPRECATED BECAUSE OF MULTITHREADING
+    @Override
+    public void setProgramStates(List<PrgState> prgStates) {
+        this.programStates = prgStates;
+    }
+
+    // DEPRECATED BECAUSE OF MULTITHREADING
     @Override
     public PrgState getCurrentProgramState() {
         return programStates.get(currentPosition);
     }
-    */
 
     @Override
     public List<PrgState> getProgramStates() {
@@ -33,27 +38,20 @@ public class Repository implements IRepository {
     }
 
     @Override
-    public void setProgramStates(List<PrgState> prgStates) {
-        this.programStates = prgStates;
-    }
-
-    @Override
     public void addProgramState(PrgState newProgramState) {
         programStates.add(newProgramState);
     }
 
-    /* DEPRECATED BECAUSE OF MULTITHREADING
     @Override
-    public String toString() {
+    public String toString(){
         return this.getCurrentProgramState().toString();
     }
-    */
 
     @Override
     public void logProgramStateExecution(PrgState programState) throws IOException {
         PrintWriter logFile;
         logFile = new PrintWriter(new BufferedWriter(new FileWriter(logFilePath, true)));
-        logFile.println(programState);
+        logFile.println(programState.toString());
         logFile.close();
     }
 }

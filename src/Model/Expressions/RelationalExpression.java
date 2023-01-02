@@ -3,6 +3,8 @@ package Model.Expressions;
 import Model.DataStructures.IDictionary;
 import Model.DataStructures.IHeap;
 import Model.Exceptions.EvaluationException;
+import Model.Types.BoolType;
+import Model.Types.IType;
 import Model.Types.IntType;
 import Model.Values.BoolValue;
 import Model.Values.IValue;
@@ -39,6 +41,21 @@ public class RelationalExpression implements IExpression {
             case "!=" -> new BoolValue(int1.getVal() != int2.getVal());
             default -> throw new EvaluationException("Invalid relational operator!");
         };
+    }
+
+    @Override
+    public IType typeCheck(IDictionary<String, IType> typeEnv) throws EvaluationException {
+        IType type1, type2;
+        type2 = e2.typeCheck(typeEnv);
+        type1 = e1.typeCheck(typeEnv);
+
+        if (type1.equals(new IntType())) {
+            if (type2.equals(new IntType())) {
+                return new BoolType();
+            } else
+                throw new EvaluationException("Second operand is not an integer!");
+        } else
+            throw new EvaluationException("First operand is not an integer!");
     }
 
     public RelationalExpression(IExpression e1, IExpression e2, String op) {

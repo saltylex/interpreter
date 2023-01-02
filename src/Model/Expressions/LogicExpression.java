@@ -42,6 +42,20 @@ public class LogicExpression implements IExpression {
         };
     }
 
+    public IType typeCheck(IDictionary<String, IType> typeEnv) throws EvaluationException {
+        IType type1, type2;
+        type1 = e1.typeCheck(typeEnv);
+        type2 = e2.typeCheck(typeEnv);
+
+        if (type1.equals(new BoolType())) {
+            if (type2.equals(new BoolType())) {
+                return new BoolType();
+            } else
+                throw new EvaluationException("Second operand is not a boolean value!");
+        } else
+            throw new EvaluationException("First operand is not a boolean value!");
+    }
+
     public String toString() {
         return e1.toString() + " " + op + "  " + e2.toString();
     }

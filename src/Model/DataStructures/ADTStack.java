@@ -9,6 +9,10 @@ import Model.Exceptions.StackException;
 public class ADTStack<T> implements IStack<T> {
     private final Deque<T> deque;
 
+    public ADTStack(ADTStack c){
+        this.deque = new LinkedList<>(c.deque);
+    }
+
     public ADTStack() {
         deque = new LinkedList<>();
     }

@@ -1,7 +1,7 @@
 package Model.DataStructures;
 
 import Model.Exceptions.EvaluationException;
-import Model.Exceptions.ExecutionError;
+import Model.Exceptions.ExecutionException;
 import Model.Values.IValue;
 
 import java.util.Map;
@@ -15,7 +15,7 @@ public interface IHeap {
 
     Integer add(IValue value);
 
-    void update(Integer position, IValue value) throws ExecutionError;
+    void update(Integer position, IValue value) throws ExecutionException;
 
     IValue get(Integer position) throws EvaluationException;
 }

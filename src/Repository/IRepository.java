@@ -1,20 +1,18 @@
 package Repository;
-
+import Model.Exceptions.ExecutionException;
 import Model.State.PrgState;
 
+import java.io.IOError;
 import java.io.IOException;
 import java.util.List;
 
 public interface IRepository {
-    /* DEPRECATED BECAUSE OF MULTITHREADING
     PrgState getCurrentProgramState();
-    */
-
-    List<PrgState> getProgramStates();
+    void addProgramState(PrgState newProgramState);
 
     void setProgramStates(List<PrgState> prgStates);
 
-    void addProgramState(PrgState newProgramState);
+    List<PrgState> getProgramStates();
 
     void logProgramStateExecution(PrgState programState) throws IOException;
 }

@@ -1,26 +1,32 @@
 package Model.DataStructures;
 
 import Model.Exceptions.EvaluationException;
-import Model.Exceptions.ExecutionError;
+import Model.Exceptions.ExecutionException;
 import Model.Values.IValue;
 
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Random;
 
+// wrapper class used for implementing the heap
 public class ADTHeap implements IHeap {
+    // memory location -> value kept there
     private final Map<Integer, IValue> map;
+
+    // saving the first next free value
     private Integer freeValue;
 
-    public Integer newValue() { // to generate a random free space in heap memory
+    // to generate a random free space in heap memory
+    public Integer newValue() {
         Random rand = new Random();
-        freeValue = rand.nextInt();
+        this.freeValue = Math.abs(rand.nextInt()); // positive number "pointers"
 
-        if (freeValue == 0 || map.containsKey(freeValue))
-            freeValue = rand.nextInt();
+        if (freeValue == 0 || map.containsKey(freeValue)) // null/already generated cases
+            freeValue = Math.abs(rand.nextInt());
 
         return freeValue;
     }
+
 
     public ADTHeap(Map<Integer, IValue> map) {
         this.map = map;
@@ -34,7 +40,8 @@ public class ADTHeap implements IHeap {
 
     @Override
     public Integer getFreeValue() {
-        synchronized (this) { // threads cannot modify heap at the same time
+        // threads cannot modify heap at the same time
+        synchronized (this) {
             return freeValue;
         }
     }
@@ -45,6 +52,7 @@ public class ADTHeap implements IHeap {
             return map;
         }
     }
+
 
     @Override
     public void setContent(Map<Integer, IValue> newMap) {
@@ -67,10 +75,10 @@ public class ADTHeap implements IHeap {
     }
 
     @Override
-    public void update(Integer position, IValue value) throws ExecutionError {
+    public void update(Integer position, IValue value) throws ExecutionException {
         synchronized (this) {
             if (!map.containsKey(position))
-                throw new ExecutionError(position + " is not a valid position in the heap!");
+                throw new ExecutionException(position + " is not a valid position in the heap!");
             map.put(position, value);
         }
     }

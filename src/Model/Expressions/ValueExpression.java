@@ -22,4 +22,8 @@ public class ValueExpression implements IExpression {
     public IValue eval(IDictionary<String, IValue> tbl, IHeap hp) {
         return value;
     }
+
+    public IType typeCheck(IDictionary<String, IType> typeEnv) {
+        return value.getType();
+    }
 }

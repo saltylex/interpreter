@@ -3,9 +3,10 @@ package Model.Statements;
 import Model.DataStructures.IDictionary;
 import Model.DataStructures.IHeap;
 import Model.Exceptions.EvaluationException;
-import Model.Exceptions.ExecutionError;
+import Model.Exceptions.ExecutionException;
 import Model.Expressions.IExpression;
 import Model.State.PrgState;
+import Model.Types.IType;
 import Model.Types.IntType;
 import Model.Types.StringType;
 import Model.Values.IValue;
@@ -26,7 +27,7 @@ public class ReadFileStatement implements IStatement {
     }
 
     @Override
-    public PrgState execute(PrgState state) throws ExecutionError, EvaluationException {
+    public PrgState execute(PrgState state) throws ExecutionException, EvaluationException {
         IDictionary<String, IValue> symTable = state.getSymTable();
         IHeap hp = state.getHeap();
         IDictionary<StringValue, BufferedReader> fileTable = state.getFileTable();
@@ -53,6 +54,15 @@ public class ReadFileStatement implements IStatement {
             throw new EvaluationException("could not read from file" + castValue.getStrval() + "!");
         }
         return null;
+    }
+
+    @Override
+    public IDictionary<String, IType> typeCheck(IDictionary<String, IType> typeEnv) throws EvaluationException {
+        if (!expression.typeCheck(typeEnv).equals(new StringType()))
+            throw new EvaluationException("ReadFile requires a StringType as variable parameter!");
+        if (!typeEnv.get(varName).equals(new IntType()))
+            throw new EvaluationException("ReadFile requires an IntType as variable parameter!");
+        return typeEnv;
     }
 
     @Override

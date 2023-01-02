@@ -2,9 +2,10 @@ package Model.Statements;
 
 import Model.DataStructures.IDictionary;
 import Model.Exceptions.EvaluationException;
-import Model.Exceptions.ExecutionError;
+import Model.Exceptions.ExecutionException;
 import Model.Expressions.IExpression;
 import Model.State.PrgState;
+import Model.Types.IType;
 import Model.Types.StringType;
 import Model.Values.IValue;
 import Model.Values.StringValue;
@@ -22,14 +23,14 @@ public class OpenReadFileStatement implements IStatement {
     }
 
     @Override
-    public PrgState execute(PrgState state) throws ExecutionError, EvaluationException {
+    public PrgState execute(PrgState state) throws ExecutionException, EvaluationException {
         IValue value = exp.eval(state.getSymTable(), state.getHeap());
         if (!value.getType().equals(new StringType()))
             throw new EvaluationException(exp+" does not evaluate to StringType!");
         StringValue fileName = (StringValue) value;
         IDictionary<StringValue, BufferedReader> fileTable = state.getFileTable();
         if (fileTable.containsKey(fileName))
-            throw new ExecutionError(fileName+" is already opened!");
+            throw new ExecutionException(fileName+" is already opened!");
         BufferedReader br;
         try {
             br = new BufferedReader(new FileReader(fileName.getStrval()));
@@ -41,7 +42,14 @@ public class OpenReadFileStatement implements IStatement {
     }
 
     @Override
+    public IDictionary<String, IType> typeCheck(IDictionary<String, IType> typeEnv) throws EvaluationException {
+        if (!exp.typeCheck(typeEnv).equals(new StringType()))
+            throw new EvaluationException("OpenReadFile error: StringType expression required!");
+        return typeEnv;
+    }
+
+    @Override
     public String toString() {
-        return String.format("OpenReadFile{%s}", exp);
+        return "OpenReadFile{"+exp+"}";
     }
 }

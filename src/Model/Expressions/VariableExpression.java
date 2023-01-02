@@ -21,4 +21,9 @@ public class VariableExpression implements IExpression {
     public IValue eval(IDictionary<String, IValue> tbl, IHeap hp) throws EvaluationException {
         return tbl.get(var);
     }
+
+    public IType typeCheck(IDictionary<String,IType> typeEnv) throws EvaluationException{
+        return typeEnv.get(var);
+    }
+
 }

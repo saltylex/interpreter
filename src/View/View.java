@@ -1,88 +1,47 @@
 package View;
 
 import Controller.Controller;
-import Model.Exceptions.*;
-import Model.Expressions.ArithmeticExpression;
-import Model.Expressions.ValueExpression;
-import Model.Expressions.VariableExpression;
+import Model.Expressions.*;
 import Model.Statements.*;
 import Model.Types.BoolType;
 import Model.Types.IntType;
+import Model.Types.RefType;
 import Model.Types.StringType;
 import Model.Values.BoolValue;
 import Model.Values.IntValue;
 import Model.Values.StringValue;
+import View.Commands.ExitCommand;
+import View.Commands.RunCommand;
 
-import java.util.Scanner;
+import java.io.IOException;
 
 public class View {
-    public static void main(String[] args) {
-        start();
-    }
 
-    public static void start() {
-        boolean running = false;
-        while (!running) {
-            try {
-                printMenu();
-                Scanner readOption = new Scanner(System.in);
-                int option = readOption.nextInt();
-                switch (option) {
-                    case 1 -> firstExample();
-                    case 2 -> secondExample();
-                    case 3 -> thirdExample();
-                    case 4 -> fourthExample();
-                    case 5 -> {
-                        running = true;
-                        System.out.println("Goodbye!");
-                    }
-                    default -> System.out.println("Invalid input!");
+    public static void main(String[] args) throws IOException {
+        TextMenu menu = new TextMenu();
 
-                }
-            } catch (Exception e) {
-                System.out.println("\u001B[31m" + e.getMessage() + "\u001B[0m");
-            }
+        Controller c1, c2, c3, c4, c5, c6, c7, c8, c9, c10;
 
-        }
-    }
-
-    private static void printMenu() {
-        System.out.println("MAIN MENU (hardcoded problems)\n1. int v; v=2; Print(v)\n2. int a; int b; a=2+3*5; b=a+1; Print(b)\n3. bool a; int v; a=true; (If a Then v=2 Else v=3); Print(v)\n4. string varf; varf=\"test.in\"; openRFile(varf); int varc; readFile(varf,varc); print(varc); readFile(varf,varc); print(varc); closeRFile(varf)\n5. Exit\nOption: ");
-    }
-
-    /* int v; v=2; Print(v) */
-    private static void firstExample() throws EvaluationException, ExecutionError, ListException, DictionaryException, StackException {
-        IStatement statement = new CompoundStatement(new VarDeclarationStatement("v", new IntType()),
+        IStatement s1 = new CompoundStatement(new VarDeclarationStatement("v", new IntType()),
                 new CompoundStatement(new AssignStatement("v", new ValueExpression(new IntValue(2))),
                         new PrintStatement(new VariableExpression("v"))));
-        runStatement(statement);
-    }
 
-    /* int a; int b; a=2+3*5; b=a+1; Print(b) */
-    private static void secondExample() throws EvaluationException, ExecutionError, ListException, DictionaryException, StackException {
-        IStatement statement = new CompoundStatement(new VarDeclarationStatement("a", new IntType()),
+        IStatement s2 = new CompoundStatement(new VarDeclarationStatement("a", new IntType()),
                 new CompoundStatement(new VarDeclarationStatement("b", new IntType()),
                         new CompoundStatement(new AssignStatement("a", new ArithmeticExpression(new ValueExpression(new IntValue(2)), new
                                 ArithmeticExpression(new ValueExpression(new IntValue(3)), new ValueExpression(new IntValue(5)), '*'), '+')),
                                 new CompoundStatement(new AssignStatement("b", new ArithmeticExpression(new VariableExpression("a"), new ValueExpression(new
                                         IntValue(1)), '+')), new PrintStatement(new VariableExpression("b"))))));
-        runStatement(statement);
-    }
 
-    /* bool a; int v; a=true; (If a Then v=2 Else v=3); Print(v) */
-    private static void thirdExample() throws EvaluationException, ExecutionError, ListException, DictionaryException, StackException {
-        IStatement statement = new CompoundStatement(new VarDeclarationStatement("a", new BoolType()),
+        IStatement s3 = new CompoundStatement(new VarDeclarationStatement("a", new BoolType()),
                 new CompoundStatement(new VarDeclarationStatement("v", new IntType()),
                         new CompoundStatement(new AssignStatement("a", new ValueExpression(new BoolValue(true))),
                                 new CompoundStatement(new IfStatement(new VariableExpression("a"),
                                         new AssignStatement("v", new ValueExpression(new IntValue(2))),
                                         new AssignStatement("v", new ValueExpression(new IntValue(3)))),
                                         new PrintStatement(new VariableExpression("v"))))));
-        runStatement(statement);
-    }
 
-    private static void fourthExample() throws EvaluationException, ExecutionError, DictionaryException, StackException {
-        IStatement statement = new CompoundStatement(
+        IStatement s4 = new CompoundStatement(
                 new VarDeclarationStatement("varf", new StringType()),
                 new CompoundStatement(
                         new AssignStatement("varf", new ValueExpression(new StringValue("test.in"))),
@@ -99,18 +58,136 @@ public class View {
                                                                 new CompoundStatement(
                                                                         new PrintStatement(new VariableExpression("varc")),
                                                                         new CloseReadFileStatement(new VariableExpression("varf"))))))))));
-        runStatement(statement);
+
+        IStatement s5 = new CompoundStatement(
+                new VarDeclarationStatement("v", new RefType(new IntType())),
+                new CompoundStatement(
+                        new HeapNewStatement("v", new ValueExpression(new IntValue(20))),
+                        new CompoundStatement(
+                                new VarDeclarationStatement("a", new RefType(new RefType(new IntType()))),
+                                new CompoundStatement(
+                                        new HeapNewStatement("a", new VariableExpression("v")),
+                                        new CompoundStatement(
+                                                new PrintStatement(new VariableExpression("v")),
+                                                new PrintStatement(new VariableExpression("a")))))));
+
+        IStatement s6 = new CompoundStatement(
+                new VarDeclarationStatement("v", new RefType(new IntType())),
+                new CompoundStatement(
+                        new HeapNewStatement("v", new ValueExpression(new IntValue(20))),
+                        new CompoundStatement(
+                                new VarDeclarationStatement("a", new RefType(new RefType(new IntType()))),
+                                new CompoundStatement(
+                                        new HeapNewStatement("a", new VariableExpression("v")),
+                                        new CompoundStatement(
+                                                new PrintStatement(new HeapReadExpression(new VariableExpression("v"))),
+                                                new PrintStatement(new HeapReadExpression(new HeapReadExpression(new VariableExpression("a")))))))));
+
+        IStatement s7 = new CompoundStatement(
+                new VarDeclarationStatement("v", new RefType(new IntType())),
+                new CompoundStatement(
+                        new HeapNewStatement("v", new ValueExpression(new IntValue(20))),
+                        new CompoundStatement(
+                                new PrintStatement(new HeapReadExpression(new VariableExpression("v"))),
+                                new CompoundStatement(
+                                        new HeapWriteStatement("v", new ValueExpression(new IntValue(30))),
+                                        new PrintStatement(new ArithmeticExpression(new HeapReadExpression(new VariableExpression("v")), new ValueExpression(new IntValue(5)), '+'))))));
+
+        IStatement s8 = new CompoundStatement(
+                new VarDeclarationStatement("v", new RefType(new IntType())),
+                new CompoundStatement(
+                        new HeapNewStatement("v", new ValueExpression(new IntValue(20))),
+                        new CompoundStatement(
+                                new VarDeclarationStatement("a", new RefType(new RefType(new IntType()))),
+                                new CompoundStatement(
+                                        new HeapNewStatement("a", new VariableExpression("v")),
+                                        new CompoundStatement(
+                                                new HeapNewStatement("v", new ValueExpression(new IntValue(30))),
+                                                new PrintStatement(new HeapReadExpression(new HeapReadExpression(new VariableExpression("a")))))))));
+
+        IStatement s9 = new CompoundStatement(
+                new VarDeclarationStatement("v", new IntType()),
+                new CompoundStatement(
+                        new AssignStatement("v", new ValueExpression(new IntValue(4))),
+                        new CompoundStatement(
+                                new WhileStatement(
+                                        new RelationalExpression(new VariableExpression("v"), new ValueExpression(new IntValue(0)), ">"),
+                                        new CompoundStatement(
+                                                new PrintStatement(new VariableExpression("v")),
+                                                new AssignStatement("v", new ArithmeticExpression(new VariableExpression("v"), new ValueExpression(new IntValue(1)), '-')))),
+                                new PrintStatement(new VariableExpression("v")))));
+
+
+        IStatement s10 = new CompoundStatement(
+                new VarDeclarationStatement("v", new IntType()),
+                new CompoundStatement(
+                        new VarDeclarationStatement("a", new RefType(new IntType())),
+                        new CompoundStatement(
+                                new AssignStatement("v", new ValueExpression(new IntValue(10))),
+                                new CompoundStatement(
+                                        new HeapNewStatement("a", new ValueExpression(new IntValue(22))),
+                                        new CompoundStatement(
+                                                new ForkStatement(
+                                                        new CompoundStatement(
+                                                                new HeapWriteStatement("a", new ValueExpression(new IntValue(30))),
+                                                                new CompoundStatement(
+                                                                        new AssignStatement("v", new ValueExpression(new IntValue(32))),
+                                                                        new CompoundStatement(
+                                                                                new PrintStatement(new VariableExpression("v")),
+                                                                                new PrintStatement(new HeapReadExpression(new VariableExpression("a"))))))),
+                                                new CompoundStatement(
+                                                        new PrintStatement(new VariableExpression("v")),
+                                                        new PrintStatement(new HeapReadExpression(new VariableExpression("a")))))))));
+
+        c1 = new Controller("C:\\Users\\lexig\\IdeaProjects\\a3\\logFile1",false);
+        c2 = new Controller("C:\\Users\\lexig\\IdeaProjects\\a3\\logFile2",false);
+        c3 = new Controller("C:\\Users\\lexig\\IdeaProjects\\a3\\logFile3",false);
+        c4 = new Controller("C:\\Users\\lexig\\IdeaProjects\\a3\\logFile4",false);
+        c5 = new Controller("C:\\Users\\lexig\\IdeaProjects\\a3\\logFile5",false);
+        c6 = new Controller("C:\\Users\\lexig\\IdeaProjects\\a3\\logFile6",false);
+        c7 = new Controller("C:\\Users\\lexig\\IdeaProjects\\a3\\logFile7",false);
+        c8 = new Controller("C:\\Users\\lexig\\IdeaProjects\\a3\\logFile8",false);
+        c9 = new Controller("C:\\Users\\lexig\\IdeaProjects\\a3\\logFile9",false);
+        c10 = new Controller("C:\\Users\\lexig\\IdeaProjects\\a3\\logFile10",false);
+
+        c1.addProgram(s1);
+        c2.addProgram(s2);
+        c3.addProgram(s3);
+        c4.addProgram(s4);
+        c5.addProgram(s5);
+        c6.addProgram(s6);
+        c7.addProgram(s7);
+        c8.addProgram(s8);
+        c9.addProgram(s9);
+        c10.addProgram(s10);
+
+        RunCommand r1, r2, r3, r4, r5, r6, r7, r8, r9, r10;
+
+        r1 = new RunCommand(s1, "1", "int v; v=2; Print(v)", c1);
+        r2 = new RunCommand(s2, "2", "int a; int b; a=2+3*5; b=a+1; Print(b)", c2);
+        r3 = new RunCommand(s3, "3", "bool a; int v; a=true; (If a Then v=2 Else v=3); Print(v)", c3);
+        r4 = new RunCommand(s4, "4", "string varf; varf=\"test.in\"; openReadFile(varf); int varc; readFile(varf,varc); print(varc); readFile(varf,varc); print(varc); closeReadFile(varf)", c4);
+        r5 = new RunCommand(s5, "5", "Ref int v;new(v,20);Ref Ref int a; new(a,v);print(v);print(a)", c5);
+        r6 = new RunCommand(s6, "6", "Ref int v;new(v,20);Ref Ref int a; new(a,v);print(rH(v));print(rH(rH(a)))", c6);
+        r7 = new RunCommand(s7, "7", "Ref int v;new(v,20);print(rH(v)); wH(v,30);print(rH(v)+5);", c7);
+        r8 = new RunCommand(s8, "8", "Ref int v;new(v,20);Ref Ref int a; new(a,v); new(v,30);print(rH(rH(a)))", c8);
+        r9 = new RunCommand(s9, "9", "int v; v=4; (while (v>0) print(v);v=v-1);print(v)", c9);
+        r10 = new RunCommand(s10, "10", "int v; Ref int a; v=10; new(a,22); fork(wH(a,30);v=32;print(v);print(rH(a)));print(v);print(rH(a))", c10);
+
+
+        menu.addCommand(r1);
+        menu.addCommand(r2);
+        menu.addCommand(r3);
+        menu.addCommand(r4);
+        menu.addCommand(r5);
+        menu.addCommand(r6);
+        menu.addCommand(r7);
+        menu.addCommand(r8);
+        menu.addCommand(r9);
+        menu.addCommand(r10);
+
+        menu.addCommand(new ExitCommand("11", "Exit"));
+        menu.show();
     }
 
-    private static void runStatement(IStatement statement) throws
-            EvaluationException, ExecutionError, DictionaryException, StackException {
-        Controller controller = new Controller(false);
-        controller.addProgram(statement);
-        if (controller.stepByStep) {
-            controller.stepByStepExecution();
-        } else {
-            controller.executeAllSteps();
-        }
-        System.out.println("Result: " + controller.getRepository().getCurrentProgramState().outToString());
-    }
 }

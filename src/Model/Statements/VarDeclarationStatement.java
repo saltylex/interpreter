@@ -30,6 +30,12 @@ public class VarDeclarationStatement implements IStatement {
     }
 
     @Override
+    public IDictionary<String, IType> typeCheck(IDictionary<String, IType> typeEnv) throws EvaluationException {
+        typeEnv.put(name, type);
+        return typeEnv;
+    }
+
+    @Override
     public String toString() {
         return String.format("%s %s", type.toString(), name);
     }

@@ -1,10 +1,12 @@
 package Model.Statements;
 
+import Model.DataStructures.IDictionary;
 import Model.Exceptions.EvaluationException;
-import Model.Exceptions.ExecutionError;
+import Model.Exceptions.ExecutionException;
 import Model.Expressions.IExpression;
 import Model.State.PrgState;
 import Model.Types.BoolType;
+import Model.Types.IType;
 import Model.Values.BoolValue;
 import Model.Values.IValue;
 
@@ -20,7 +22,7 @@ public class IfStatement implements IStatement {
     }
 
     @Override
-    public PrgState execute(PrgState state) throws EvaluationException, ExecutionError {
+    public PrgState execute(PrgState state) throws EvaluationException, ExecutionException {
         IValue value = exp.eval(state.getSymTable(), state.getHeap());
 
         if (!value.getType().equals(new BoolType())) {
@@ -34,6 +36,18 @@ public class IfStatement implements IStatement {
             state.getExeStack().push(elseS);
         }
         return null;
+    }
+
+    @Override
+    public IDictionary<String, IType> typeCheck(IDictionary<String, IType> typeEnv) throws EvaluationException {
+        IType typeExpression = exp.typeCheck(typeEnv);
+        if (typeExpression.equals(new BoolType())) {
+            thenS.typeCheck(typeEnv.copy());
+            elseS.typeCheck(typeEnv.copy());
+            return typeEnv;
+        }
+        else
+            throw new EvaluationException("The condition of the if statement is not of type BoolType!");
     }
 
     @Override

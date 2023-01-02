@@ -3,6 +3,7 @@ package Model.Expressions;
 import Model.DataStructures.IDictionary;
 import Model.DataStructures.IHeap;
 import Model.Exceptions.EvaluationException;
+import Model.Types.IType;
 import Model.Types.IntType;
 import Model.Values.IValue;
 import Model.Values.IntValue;
@@ -45,6 +46,22 @@ public class ArithmeticExpression implements IExpression {
                 throw new EvaluationException("Invalid operator!");
         }
     }
+
+    @Override
+    public IType typeCheck(IDictionary<String, IType> typeEnv) throws EvaluationException {
+        IType type1, type2;
+        type1 = e1.typeCheck(typeEnv);
+        type2 = e2.typeCheck(typeEnv);
+
+        if (type1.equals(new IntType())) {
+            if (type2.equals(new IntType())) {
+                return new IntType();
+            } else
+                throw new EvaluationException("Second operand is not an integer!");
+        } else
+            throw new EvaluationException("First operand is not an integer!");
+    }
+
 
     public ArithmeticExpression(IExpression e1, IExpression e2, char op) {
         this.op = op;
