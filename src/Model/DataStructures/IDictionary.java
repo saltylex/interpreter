@@ -2,6 +2,7 @@ package Model.DataStructures;
 
 import java.util.Dictionary;
 import java.util.Enumeration;
+import java.util.Map;
 
 public interface IDictionary<k, v> {
 
@@ -23,6 +24,7 @@ public interface IDictionary<k, v> {
 
     IDictionary<k, v> copy();
 
+    Map<k, v> getContent();
 
 
 }

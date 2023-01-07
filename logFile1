@@ -274,3 +274,141 @@ v -> 2
 ~ HEAP ~
 
 
+ID: -1522407646
+
+~ EXECUTION STACK ~
+(int v;(v=2;print(v)))|
+~ SYMBOL TABLE ~
+
+~ OUTPUT ~
+
+~ FILE TABLE ~
+
+~ HEAP ~
+
+
+ID: -1522407646
+
+~ EXECUTION STACK ~
+int v|(v=2;print(v))|
+~ SYMBOL TABLE ~
+
+~ OUTPUT ~
+
+~ FILE TABLE ~
+
+~ HEAP ~
+
+
+ID: -1522407646
+
+~ EXECUTION STACK ~
+int v|(v=2;print(v))|
+~ SYMBOL TABLE ~
+
+~ OUTPUT ~
+
+~ FILE TABLE ~
+
+~ HEAP ~
+
+
+ID: -1522407646
+
+~ EXECUTION STACK ~
+(v=2;print(v))|
+~ SYMBOL TABLE ~
+v -> 0
+
+~ OUTPUT ~
+
+~ FILE TABLE ~
+
+~ HEAP ~
+
+
+ID: -1522407646
+
+~ EXECUTION STACK ~
+(v=2;print(v))|
+~ SYMBOL TABLE ~
+v -> 0
+
+~ OUTPUT ~
+
+~ FILE TABLE ~
+
+~ HEAP ~
+
+
+ID: -1522407646
+
+~ EXECUTION STACK ~
+v=2|print(v)|
+~ SYMBOL TABLE ~
+v -> 0
+
+~ OUTPUT ~
+
+~ FILE TABLE ~
+
+~ HEAP ~
+
+
+ID: -1522407646
+
+~ EXECUTION STACK ~
+v=2|print(v)|
+~ SYMBOL TABLE ~
+v -> 0
+
+~ OUTPUT ~
+
+~ FILE TABLE ~
+
+~ HEAP ~
+
+
+ID: -1522407646
+
+~ EXECUTION STACK ~
+print(v)|
+~ SYMBOL TABLE ~
+v -> 2
+
+~ OUTPUT ~
+
+~ FILE TABLE ~
+
+~ HEAP ~
+
+
+ID: -1522407646
+
+~ EXECUTION STACK ~
+print(v)|
+~ SYMBOL TABLE ~
+v -> 2
+
+~ OUTPUT ~
+
+~ FILE TABLE ~
+
+~ HEAP ~
+
+
+ID: -1522407646
+
+~ EXECUTION STACK ~
+
+~ SYMBOL TABLE ~
+v -> 2
+
+~ OUTPUT ~
+2
+
+~ FILE TABLE ~
+
+~ HEAP ~
+
+

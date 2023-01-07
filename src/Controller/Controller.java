@@ -84,6 +84,7 @@ public class Controller {
         return newHeap;
     }
 
+
     Map<Integer, IValue> garbageCollector(Set<Integer> symTableAddr, Map<Integer, IValue> heap){
         return heap.entrySet().stream()
                 .filter(e -> symTableAddr.contains(e.getKey()))
@@ -125,8 +126,11 @@ public class Controller {
 
         programStateList.addAll(newProgramsList);
         programStateList.forEach(prg -> {
-            prg.getHeap().setContent(garbageCollector(
-                    getAddressesFromSymTable(Collections.list(prg.getSymTable().elements())), prg.getHeap().getContent()));
+            prg.getHeap().setContent(garbageCollector( getAddrFromSymTable(
+                            programStateList.stream().map(programState -> programState.getSymTable().getContent().values()).collect(Collectors.toList()),
+                            prg.getHeap().getContent()
+                    ),
+                    prg.getHeap().getContent()));
         });
 
         /// We save again all the program states, including the old and the new ones to a file
@@ -155,14 +159,18 @@ public class Controller {
                 .collect(Collectors.toList());
     }
 
-    Set<Integer> getAddressesFromSymTable(Collection<IValue> symTableValues) {
-        return symTableValues.stream()
+    Set<Integer> getAddrFromSymTable(List<Collection<IValue>> symTableValues, Map<Integer, IValue> heap) {
+        Set<Integer> toReturn = new TreeSet<>();
+        symTableValues.forEach(symTable -> symTable.stream()
                 .filter(v -> v instanceof RefValue)
-                .map(v -> {
-                    RefValue v1 = (RefValue) v;
-                    return v1.getAddr();
-                })
-                .collect(Collectors.toSet());
+                .forEach(v -> {
+                    while (v instanceof RefValue) {
+                        toReturn.add(((RefValue) v).getAddr());
+                        v = heap.get(((RefValue) v).getAddr());
+                    }
+                }));
+
+        return toReturn;
     }
 
     // DEPRECATED BECAUSE OF MULTITHREADING

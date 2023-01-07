@@ -2,6 +2,7 @@ package Model.DataStructures;
 
 import java.util.Enumeration;
 import java.util.Hashtable;
+import java.util.Map;
 
 // wrapper class used by the file & symbol tables.
 public class ADTDictionary<k, v> implements IDictionary<k, v> {
@@ -56,8 +57,10 @@ public class ADTDictionary<k, v> implements IDictionary<k, v> {
         return toReturn;
     }
 
-
-
+    @Override
+    public Map<k, v> getContent() {
+        return data;
+    }
 
 
 }
