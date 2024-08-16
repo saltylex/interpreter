@@ -49,6 +49,12 @@ public class Controller {
         this.addProgram(c);
     }
 
+    public Controller(IRepository r) {
+        logFilePath = r.getLogFilePath();
+        repository = r;
+        this.stepByStep = false;
+    }
+
     public IRepository getRepository() {
         return repository;
     }
@@ -85,7 +91,7 @@ public class Controller {
     }
 
 
-    Map<Integer, IValue> garbageCollector(Set<Integer> symTableAddr, Map<Integer, IValue> heap){
+    Map<Integer, IValue> garbageCollector(Set<Integer> symTableAddr, Map<Integer, IValue> heap) {
         return heap.entrySet().stream()
                 .filter(e -> symTableAddr.contains(e.getKey()))
                 .collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue));
@@ -126,7 +132,7 @@ public class Controller {
 
         programStateList.addAll(newProgramsList);
         programStateList.forEach(prg -> {
-            prg.getHeap().setContent(garbageCollector( getAddrFromSymTable(
+            prg.getHeap().setContent(garbageCollector(getAddrFromSymTable(
                             programStateList.stream().map(programState -> programState.getSymTable().getContent().values()).collect(Collectors.toList()),
                             prg.getHeap().getContent()
                     ),
@@ -147,7 +153,7 @@ public class Controller {
     }
 
     public void runTypeChecker() throws EvaluationException, StackException {
-        for (PrgState state: repository.getProgramStates()) {
+        for (PrgState state : repository.getProgramStates()) {
             IDictionary<String, IType> typeTable = new ADTDictionary<>();
             state.getExeStack().peek().typeCheck(typeTable);
         }
@@ -211,12 +217,12 @@ public class Controller {
         }
     }
 
-    // EDITED FOR MULTITHREADING
+    // EDITED FOR MULTITHREADING, CLI
     public void stepByStepExecution() throws EvaluationException, ExecutionException, StackException {
         runTypeChecker();
-        executor = Executors.newFixedThreadPool(2);
-        //remove the completed programs
-        List<PrgState>  prgList=removeCompletedPrograms(repository.getProgramStates());
+        // this only needs to be run once, therefore it's redundant
+        executor = Executors.newFixedThreadPool(16);
+        List<PrgState> prgList = removeCompletedPrograms(repository.getProgramStates());
 
         // problematic if left unchecked
         Scanner inputBestie = new Scanner(System.in);
@@ -224,13 +230,13 @@ public class Controller {
         int stepCount = 1;
         String inputForStep;
 
-        while(prgList.size() > 0){
-            System.out.println("Step "+stepCount+":");
+        while (prgList.size() > 0) {
+            System.out.println("Step " + stepCount + ":");
             inputForStep = inputBestie.nextLine();
             stepCount++;
             oneStepForEachProgram(prgList);
             //remove the completed programs
-            prgList=removeCompletedPrograms(repository.getProgramStates());
+            prgList = removeCompletedPrograms(repository.getProgramStates());
         }
 
         executor.shutdownNow();
@@ -243,16 +249,48 @@ public class Controller {
         repository.setProgramStates(prgList);
 
     }
+
+
+    public void takeAStepForGUI() throws EvaluationException, ExecutionException, StackException {
+        executor = Executors.newFixedThreadPool(16);
+        List<PrgState> prgList = removeCompletedPrograms(repository.getProgramStates());
+
+        // problematic if left unchecked
+//        Scanner inputBestie = new Scanner(System.in);
+
+//        int stepCount = 1;
+//        String inputForStep;
+
+        if (prgList.size() > 0) {
+//            System.out.println("Step " + stepCount + ":");
+//            inputForStep = inputBestie.nextLine();
+//            stepCount++;
+            oneStepForEachProgram(prgList);
+            //remove the completed programs
+            prgList = removeCompletedPrograms(repository.getProgramStates());
+        }
+
+        executor.shutdownNow();
+
+        // HERE the repository still contains at least one Completed Prg
+        // and its List<PrgState> is not empty. Note that oneStepForAllPrg calls the method
+        // setPrgList of repository in order to change the repository
+        //
+        // update the repository state
+        repository.setProgramStates(prgList);
+
+    }
+
     // ADDED FOR MULTITHREADING
     public void allStep() throws ExecutionException, EvaluationException, StackException {
         runTypeChecker();
-        executor = Executors.newFixedThreadPool(2);
+        executor = Executors.newFixedThreadPool(16);
         //remove the completed programs
-        List<PrgState>  prgList=removeCompletedPrograms(repository.getProgramStates());
-        while(prgList.size() > 0){
+        List<PrgState> prgList = removeCompletedPrograms(repository.getProgramStates());
+        while (prgList.size() > 0) {
             oneStepForEachProgram(prgList);
             //remove the completed programs
-            prgList=removeCompletedPrograms(repository.getProgramStates());
+            prgList = removeCompletedPrograms(repository.getProgramStates());
         }
 
         executor.shutdownNow();

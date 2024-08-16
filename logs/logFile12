@@ -1,0 +1,1834 @@
+ID: -361774694
+
+~ EXECUTION STACK ~
+(Ref(int) v1;(Ref(int) v2;(int x;(int q;(New{v1, 20};(New{v2, 30};(newLock(x);(Fork{
+(Fork{
+(lock(x);(WriteHeap{v1, ReadHeap{v1}-1};unlock(x)))
+};(lock(x);(WriteHeap{v1, ReadHeap{v1}*10};unlock(x))))
+};(newLock(q);(Fork{
+(Fork{
+(lock(q);(WriteHeap{v2, ReadHeap{v2}+5};unlock(q)))
+};(lock(q);(WriteHeap{v2, ReadHeap{v2}*10};unlock(q))))
+};(no operation;(no operation;(no operation;(no operation;(lock(x);(print(ReadHeap{v1});(unlock(x);(lock(q);(print(ReadHeap{v2});unlock(q))))))))))))))))))))|
+~ SYMBOL TABLE ~
+
+~ OUTPUT ~
+
+~ FILE TABLE ~
+
+~ HEAP ~
+
+~ LOCK TABLE ~
+{}
+
+ID: -361774694
+
+~ EXECUTION STACK ~
+Ref(int) v1|(Ref(int) v2;(int x;(int q;(New{v1, 20};(New{v2, 30};(newLock(x);(Fork{
+(Fork{
+(lock(x);(WriteHeap{v1, ReadHeap{v1}-1};unlock(x)))
+};(lock(x);(WriteHeap{v1, ReadHeap{v1}*10};unlock(x))))
+};(newLock(q);(Fork{
+(Fork{
+(lock(q);(WriteHeap{v2, ReadHeap{v2}+5};unlock(q)))
+};(lock(q);(WriteHeap{v2, ReadHeap{v2}*10};unlock(q))))
+};(no operation;(no operation;(no operation;(no operation;(lock(x);(print(ReadHeap{v1});(unlock(x);(lock(q);(print(ReadHeap{v2});unlock(q)))))))))))))))))))|
+~ SYMBOL TABLE ~
+
+~ OUTPUT ~
+
+~ FILE TABLE ~
+
+~ HEAP ~
+
+~ LOCK TABLE ~
+{}
+
+ID: -361774694
+
+~ EXECUTION STACK ~
+Ref(int) v1|(Ref(int) v2;(int x;(int q;(New{v1, 20};(New{v2, 30};(newLock(x);(Fork{
+(Fork{
+(lock(x);(WriteHeap{v1, ReadHeap{v1}-1};unlock(x)))
+};(lock(x);(WriteHeap{v1, ReadHeap{v1}*10};unlock(x))))
+};(newLock(q);(Fork{
+(Fork{
+(lock(q);(WriteHeap{v2, ReadHeap{v2}+5};unlock(q)))
+};(lock(q);(WriteHeap{v2, ReadHeap{v2}*10};unlock(q))))
+};(no operation;(no operation;(no operation;(no operation;(lock(x);(print(ReadHeap{v1});(unlock(x);(lock(q);(print(ReadHeap{v2});unlock(q)))))))))))))))))))|
+~ SYMBOL TABLE ~
+
+~ OUTPUT ~
+
+~ FILE TABLE ~
+
+~ HEAP ~
+
+~ LOCK TABLE ~
+{}
+
+ID: -361774694
+
+~ EXECUTION STACK ~
+(Ref(int) v2;(int x;(int q;(New{v1, 20};(New{v2, 30};(newLock(x);(Fork{
+(Fork{
+(lock(x);(WriteHeap{v1, ReadHeap{v1}-1};unlock(x)))
+};(lock(x);(WriteHeap{v1, ReadHeap{v1}*10};unlock(x))))
+};(newLock(q);(Fork{
+(Fork{
+(lock(q);(WriteHeap{v2, ReadHeap{v2}+5};unlock(q)))
+};(lock(q);(WriteHeap{v2, ReadHeap{v2}*10};unlock(q))))
+};(no operation;(no operation;(no operation;(no operation;(lock(x);(print(ReadHeap{v1});(unlock(x);(lock(q);(print(ReadHeap{v2});unlock(q)))))))))))))))))))|
+~ SYMBOL TABLE ~
+v1 -> ReferenceValue{0 -> int}
+
+~ OUTPUT ~
+
+~ FILE TABLE ~
+
+~ HEAP ~
+
+~ LOCK TABLE ~
+{}
+
+ID: -361774694
+
+~ EXECUTION STACK ~
+(Ref(int) v2;(int x;(int q;(New{v1, 20};(New{v2, 30};(newLock(x);(Fork{
+(Fork{
+(lock(x);(WriteHeap{v1, ReadHeap{v1}-1};unlock(x)))
+};(lock(x);(WriteHeap{v1, ReadHeap{v1}*10};unlock(x))))
+};(newLock(q);(Fork{
+(Fork{
+(lock(q);(WriteHeap{v2, ReadHeap{v2}+5};unlock(q)))
+};(lock(q);(WriteHeap{v2, ReadHeap{v2}*10};unlock(q))))
+};(no operation;(no operation;(no operation;(no operation;(lock(x);(print(ReadHeap{v1});(unlock(x);(lock(q);(print(ReadHeap{v2});unlock(q)))))))))))))))))))|
+~ SYMBOL TABLE ~
+v1 -> ReferenceValue{0 -> int}
+
+~ OUTPUT ~
+
+~ FILE TABLE ~
+
+~ HEAP ~
+
+~ LOCK TABLE ~
+{}
+
+ID: -361774694
+
+~ EXECUTION STACK ~
+Ref(int) v2|(int x;(int q;(New{v1, 20};(New{v2, 30};(newLock(x);(Fork{
+(Fork{
+(lock(x);(WriteHeap{v1, ReadHeap{v1}-1};unlock(x)))
+};(lock(x);(WriteHeap{v1, ReadHeap{v1}*10};unlock(x))))
+};(newLock(q);(Fork{
+(Fork{
+(lock(q);(WriteHeap{v2, ReadHeap{v2}+5};unlock(q)))
+};(lock(q);(WriteHeap{v2, ReadHeap{v2}*10};unlock(q))))
+};(no operation;(no operation;(no operation;(no operation;(lock(x);(print(ReadHeap{v1});(unlock(x);(lock(q);(print(ReadHeap{v2});unlock(q))))))))))))))))))|
+~ SYMBOL TABLE ~
+v1 -> ReferenceValue{0 -> int}
+
+~ OUTPUT ~
+
+~ FILE TABLE ~
+
+~ HEAP ~
+
+~ LOCK TABLE ~
+{}
+
+ID: -361774694
+
+~ EXECUTION STACK ~
+Ref(int) v2|(int x;(int q;(New{v1, 20};(New{v2, 30};(newLock(x);(Fork{
+(Fork{
+(lock(x);(WriteHeap{v1, ReadHeap{v1}-1};unlock(x)))
+};(lock(x);(WriteHeap{v1, ReadHeap{v1}*10};unlock(x))))
+};(newLock(q);(Fork{
+(Fork{
+(lock(q);(WriteHeap{v2, ReadHeap{v2}+5};unlock(q)))
+};(lock(q);(WriteHeap{v2, ReadHeap{v2}*10};unlock(q))))
+};(no operation;(no operation;(no operation;(no operation;(lock(x);(print(ReadHeap{v1});(unlock(x);(lock(q);(print(ReadHeap{v2});unlock(q))))))))))))))))))|
+~ SYMBOL TABLE ~
+v1 -> ReferenceValue{0 -> int}
+
+~ OUTPUT ~
+
+~ FILE TABLE ~
+
+~ HEAP ~
+
+~ LOCK TABLE ~
+{}
+
+ID: -361774694
+
+~ EXECUTION STACK ~
+(int x;(int q;(New{v1, 20};(New{v2, 30};(newLock(x);(Fork{
+(Fork{
+(lock(x);(WriteHeap{v1, ReadHeap{v1}-1};unlock(x)))
+};(lock(x);(WriteHeap{v1, ReadHeap{v1}*10};unlock(x))))
+};(newLock(q);(Fork{
+(Fork{
+(lock(q);(WriteHeap{v2, ReadHeap{v2}+5};unlock(q)))
+};(lock(q);(WriteHeap{v2, ReadHeap{v2}*10};unlock(q))))
+};(no operation;(no operation;(no operation;(no operation;(lock(x);(print(ReadHeap{v1});(unlock(x);(lock(q);(print(ReadHeap{v2});unlock(q))))))))))))))))))|
+~ SYMBOL TABLE ~
+v2 -> ReferenceValue{0 -> int}
+v1 -> ReferenceValue{0 -> int}
+
+~ OUTPUT ~
+
+~ FILE TABLE ~
+
+~ HEAP ~
+
+~ LOCK TABLE ~
+{}
+
+ID: -361774694
+
+~ EXECUTION STACK ~
+(int x;(int q;(New{v1, 20};(New{v2, 30};(newLock(x);(Fork{
+(Fork{
+(lock(x);(WriteHeap{v1, ReadHeap{v1}-1};unlock(x)))
+};(lock(x);(WriteHeap{v1, ReadHeap{v1}*10};unlock(x))))
+};(newLock(q);(Fork{
+(Fork{
+(lock(q);(WriteHeap{v2, ReadHeap{v2}+5};unlock(q)))
+};(lock(q);(WriteHeap{v2, ReadHeap{v2}*10};unlock(q))))
+};(no operation;(no operation;(no operation;(no operation;(lock(x);(print(ReadHeap{v1});(unlock(x);(lock(q);(print(ReadHeap{v2});unlock(q))))))))))))))))))|
+~ SYMBOL TABLE ~
+v2 -> ReferenceValue{0 -> int}
+v1 -> ReferenceValue{0 -> int}
+
+~ OUTPUT ~
+
+~ FILE TABLE ~
+
+~ HEAP ~
+
+~ LOCK TABLE ~
+{}
+
+ID: -361774694
+
+~ EXECUTION STACK ~
+int x|(int q;(New{v1, 20};(New{v2, 30};(newLock(x);(Fork{
+(Fork{
+(lock(x);(WriteHeap{v1, ReadHeap{v1}-1};unlock(x)))
+};(lock(x);(WriteHeap{v1, ReadHeap{v1}*10};unlock(x))))
+};(newLock(q);(Fork{
+(Fork{
+(lock(q);(WriteHeap{v2, ReadHeap{v2}+5};unlock(q)))
+};(lock(q);(WriteHeap{v2, ReadHeap{v2}*10};unlock(q))))
+};(no operation;(no operation;(no operation;(no operation;(lock(x);(print(ReadHeap{v1});(unlock(x);(lock(q);(print(ReadHeap{v2});unlock(q)))))))))))))))))|
+~ SYMBOL TABLE ~
+v2 -> ReferenceValue{0 -> int}
+v1 -> ReferenceValue{0 -> int}
+
+~ OUTPUT ~
+
+~ FILE TABLE ~
+
+~ HEAP ~
+
+~ LOCK TABLE ~
+{}
+
+ID: -361774694
+
+~ EXECUTION STACK ~
+int x|(int q;(New{v1, 20};(New{v2, 30};(newLock(x);(Fork{
+(Fork{
+(lock(x);(WriteHeap{v1, ReadHeap{v1}-1};unlock(x)))
+};(lock(x);(WriteHeap{v1, ReadHeap{v1}*10};unlock(x))))
+};(newLock(q);(Fork{
+(Fork{
+(lock(q);(WriteHeap{v2, ReadHeap{v2}+5};unlock(q)))
+};(lock(q);(WriteHeap{v2, ReadHeap{v2}*10};unlock(q))))
+};(no operation;(no operation;(no operation;(no operation;(lock(x);(print(ReadHeap{v1});(unlock(x);(lock(q);(print(ReadHeap{v2});unlock(q)))))))))))))))))|
+~ SYMBOL TABLE ~
+v2 -> ReferenceValue{0 -> int}
+v1 -> ReferenceValue{0 -> int}
+
+~ OUTPUT ~
+
+~ FILE TABLE ~
+
+~ HEAP ~
+
+~ LOCK TABLE ~
+{}
+
+ID: -361774694
+
+~ EXECUTION STACK ~
+(int q;(New{v1, 20};(New{v2, 30};(newLock(x);(Fork{
+(Fork{
+(lock(x);(WriteHeap{v1, ReadHeap{v1}-1};unlock(x)))
+};(lock(x);(WriteHeap{v1, ReadHeap{v1}*10};unlock(x))))
+};(newLock(q);(Fork{
+(Fork{
+(lock(q);(WriteHeap{v2, ReadHeap{v2}+5};unlock(q)))
+};(lock(q);(WriteHeap{v2, ReadHeap{v2}*10};unlock(q))))
+};(no operation;(no operation;(no operation;(no operation;(lock(x);(print(ReadHeap{v1});(unlock(x);(lock(q);(print(ReadHeap{v2});unlock(q)))))))))))))))))|
+~ SYMBOL TABLE ~
+x -> 0
+v2 -> ReferenceValue{0 -> int}
+v1 -> ReferenceValue{0 -> int}
+
+~ OUTPUT ~
+
+~ FILE TABLE ~
+
+~ HEAP ~
+
+~ LOCK TABLE ~
+{}
+
+ID: -361774694
+
+~ EXECUTION STACK ~
+(int q;(New{v1, 20};(New{v2, 30};(newLock(x);(Fork{
+(Fork{
+(lock(x);(WriteHeap{v1, ReadHeap{v1}-1};unlock(x)))
+};(lock(x);(WriteHeap{v1, ReadHeap{v1}*10};unlock(x))))
+};(newLock(q);(Fork{
+(Fork{
+(lock(q);(WriteHeap{v2, ReadHeap{v2}+5};unlock(q)))
+};(lock(q);(WriteHeap{v2, ReadHeap{v2}*10};unlock(q))))
+};(no operation;(no operation;(no operation;(no operation;(lock(x);(print(ReadHeap{v1});(unlock(x);(lock(q);(print(ReadHeap{v2});unlock(q)))))))))))))))))|
+~ SYMBOL TABLE ~
+x -> 0
+v2 -> ReferenceValue{0 -> int}
+v1 -> ReferenceValue{0 -> int}
+
+~ OUTPUT ~
+
+~ FILE TABLE ~
+
+~ HEAP ~
+
+~ LOCK TABLE ~
+{}
+
+ID: -361774694
+
+~ EXECUTION STACK ~
+int q|(New{v1, 20};(New{v2, 30};(newLock(x);(Fork{
+(Fork{
+(lock(x);(WriteHeap{v1, ReadHeap{v1}-1};unlock(x)))
+};(lock(x);(WriteHeap{v1, ReadHeap{v1}*10};unlock(x))))
+};(newLock(q);(Fork{
+(Fork{
+(lock(q);(WriteHeap{v2, ReadHeap{v2}+5};unlock(q)))
+};(lock(q);(WriteHeap{v2, ReadHeap{v2}*10};unlock(q))))
+};(no operation;(no operation;(no operation;(no operation;(lock(x);(print(ReadHeap{v1});(unlock(x);(lock(q);(print(ReadHeap{v2});unlock(q))))))))))))))))|
+~ SYMBOL TABLE ~
+x -> 0
+v2 -> ReferenceValue{0 -> int}
+v1 -> ReferenceValue{0 -> int}
+
+~ OUTPUT ~
+
+~ FILE TABLE ~
+
+~ HEAP ~
+
+~ LOCK TABLE ~
+{}
+
+ID: -361774694
+
+~ EXECUTION STACK ~
+int q|(New{v1, 20};(New{v2, 30};(newLock(x);(Fork{
+(Fork{
+(lock(x);(WriteHeap{v1, ReadHeap{v1}-1};unlock(x)))
+};(lock(x);(WriteHeap{v1, ReadHeap{v1}*10};unlock(x))))
+};(newLock(q);(Fork{
+(Fork{
+(lock(q);(WriteHeap{v2, ReadHeap{v2}+5};unlock(q)))
+};(lock(q);(WriteHeap{v2, ReadHeap{v2}*10};unlock(q))))
+};(no operation;(no operation;(no operation;(no operation;(lock(x);(print(ReadHeap{v1});(unlock(x);(lock(q);(print(ReadHeap{v2});unlock(q))))))))))))))))|
+~ SYMBOL TABLE ~
+x -> 0
+v2 -> ReferenceValue{0 -> int}
+v1 -> ReferenceValue{0 -> int}
+
+~ OUTPUT ~
+
+~ FILE TABLE ~
+
+~ HEAP ~
+
+~ LOCK TABLE ~
+{}
+
+ID: -361774694
+
+~ EXECUTION STACK ~
+(New{v1, 20};(New{v2, 30};(newLock(x);(Fork{
+(Fork{
+(lock(x);(WriteHeap{v1, ReadHeap{v1}-1};unlock(x)))
+};(lock(x);(WriteHeap{v1, ReadHeap{v1}*10};unlock(x))))
+};(newLock(q);(Fork{
+(Fork{
+(lock(q);(WriteHeap{v2, ReadHeap{v2}+5};unlock(q)))
+};(lock(q);(WriteHeap{v2, ReadHeap{v2}*10};unlock(q))))
+};(no operation;(no operation;(no operation;(no operation;(lock(x);(print(ReadHeap{v1});(unlock(x);(lock(q);(print(ReadHeap{v2});unlock(q))))))))))))))))|
+~ SYMBOL TABLE ~
+x -> 0
+q -> 0
+v2 -> ReferenceValue{0 -> int}
+v1 -> ReferenceValue{0 -> int}
+
+~ OUTPUT ~
+
+~ FILE TABLE ~
+
+~ HEAP ~
+
+~ LOCK TABLE ~
+{}
+
+ID: -361774694
+
+~ EXECUTION STACK ~
+(New{v1, 20};(New{v2, 30};(newLock(x);(Fork{
+(Fork{
+(lock(x);(WriteHeap{v1, ReadHeap{v1}-1};unlock(x)))
+};(lock(x);(WriteHeap{v1, ReadHeap{v1}*10};unlock(x))))
+};(newLock(q);(Fork{
+(Fork{
+(lock(q);(WriteHeap{v2, ReadHeap{v2}+5};unlock(q)))
+};(lock(q);(WriteHeap{v2, ReadHeap{v2}*10};unlock(q))))
+};(no operation;(no operation;(no operation;(no operation;(lock(x);(print(ReadHeap{v1});(unlock(x);(lock(q);(print(ReadHeap{v2});unlock(q))))))))))))))))|
+~ SYMBOL TABLE ~
+x -> 0
+q -> 0
+v2 -> ReferenceValue{0 -> int}
+v1 -> ReferenceValue{0 -> int}
+
+~ OUTPUT ~
+
+~ FILE TABLE ~
+
+~ HEAP ~
+
+~ LOCK TABLE ~
+{}
+
+ID: -361774694
+
+~ EXECUTION STACK ~
+New{v1, 20}|(New{v2, 30};(newLock(x);(Fork{
+(Fork{
+(lock(x);(WriteHeap{v1, ReadHeap{v1}-1};unlock(x)))
+};(lock(x);(WriteHeap{v1, ReadHeap{v1}*10};unlock(x))))
+};(newLock(q);(Fork{
+(Fork{
+(lock(q);(WriteHeap{v2, ReadHeap{v2}+5};unlock(q)))
+};(lock(q);(WriteHeap{v2, ReadHeap{v2}*10};unlock(q))))
+};(no operation;(no operation;(no operation;(no operation;(lock(x);(print(ReadHeap{v1});(unlock(x);(lock(q);(print(ReadHeap{v2});unlock(q)))))))))))))))|
+~ SYMBOL TABLE ~
+x -> 0
+q -> 0
+v2 -> ReferenceValue{0 -> int}
+v1 -> ReferenceValue{0 -> int}
+
+~ OUTPUT ~
+
+~ FILE TABLE ~
+
+~ HEAP ~
+
+~ LOCK TABLE ~
+{}
+
+ID: -361774694
+
+~ EXECUTION STACK ~
+New{v1, 20}|(New{v2, 30};(newLock(x);(Fork{
+(Fork{
+(lock(x);(WriteHeap{v1, ReadHeap{v1}-1};unlock(x)))
+};(lock(x);(WriteHeap{v1, ReadHeap{v1}*10};unlock(x))))
+};(newLock(q);(Fork{
+(Fork{
+(lock(q);(WriteHeap{v2, ReadHeap{v2}+5};unlock(q)))
+};(lock(q);(WriteHeap{v2, ReadHeap{v2}*10};unlock(q))))
+};(no operation;(no operation;(no operation;(no operation;(lock(x);(print(ReadHeap{v1});(unlock(x);(lock(q);(print(ReadHeap{v2});unlock(q)))))))))))))))|
+~ SYMBOL TABLE ~
+x -> 0
+q -> 0
+v2 -> ReferenceValue{0 -> int}
+v1 -> ReferenceValue{0 -> int}
+
+~ OUTPUT ~
+
+~ FILE TABLE ~
+
+~ HEAP ~
+
+~ LOCK TABLE ~
+{}
+
+ID: -361774694
+
+~ EXECUTION STACK ~
+(New{v2, 30};(newLock(x);(Fork{
+(Fork{
+(lock(x);(WriteHeap{v1, ReadHeap{v1}-1};unlock(x)))
+};(lock(x);(WriteHeap{v1, ReadHeap{v1}*10};unlock(x))))
+};(newLock(q);(Fork{
+(Fork{
+(lock(q);(WriteHeap{v2, ReadHeap{v2}+5};unlock(q)))
+};(lock(q);(WriteHeap{v2, ReadHeap{v2}*10};unlock(q))))
+};(no operation;(no operation;(no operation;(no operation;(lock(x);(print(ReadHeap{v1});(unlock(x);(lock(q);(print(ReadHeap{v2});unlock(q)))))))))))))))|
+~ SYMBOL TABLE ~
+x -> 0
+q -> 0
+v2 -> ReferenceValue{0 -> int}
+v1 -> ReferenceValue{304637242 -> int}
+
+~ OUTPUT ~
+
+~ FILE TABLE ~
+
+~ HEAP ~
+304637242 -> 20
+
+~ LOCK TABLE ~
+{}
+
+ID: -361774694
+
+~ EXECUTION STACK ~
+(New{v2, 30};(newLock(x);(Fork{
+(Fork{
+(lock(x);(WriteHeap{v1, ReadHeap{v1}-1};unlock(x)))
+};(lock(x);(WriteHeap{v1, ReadHeap{v1}*10};unlock(x))))
+};(newLock(q);(Fork{
+(Fork{
+(lock(q);(WriteHeap{v2, ReadHeap{v2}+5};unlock(q)))
+};(lock(q);(WriteHeap{v2, ReadHeap{v2}*10};unlock(q))))
+};(no operation;(no operation;(no operation;(no operation;(lock(x);(print(ReadHeap{v1});(unlock(x);(lock(q);(print(ReadHeap{v2});unlock(q)))))))))))))))|
+~ SYMBOL TABLE ~
+x -> 0
+q -> 0
+v2 -> ReferenceValue{0 -> int}
+v1 -> ReferenceValue{304637242 -> int}
+
+~ OUTPUT ~
+
+~ FILE TABLE ~
+
+~ HEAP ~
+304637242 -> 20
+
+~ LOCK TABLE ~
+{}
+
+ID: -361774694
+
+~ EXECUTION STACK ~
+New{v2, 30}|(newLock(x);(Fork{
+(Fork{
+(lock(x);(WriteHeap{v1, ReadHeap{v1}-1};unlock(x)))
+};(lock(x);(WriteHeap{v1, ReadHeap{v1}*10};unlock(x))))
+};(newLock(q);(Fork{
+(Fork{
+(lock(q);(WriteHeap{v2, ReadHeap{v2}+5};unlock(q)))
+};(lock(q);(WriteHeap{v2, ReadHeap{v2}*10};unlock(q))))
+};(no operation;(no operation;(no operation;(no operation;(lock(x);(print(ReadHeap{v1});(unlock(x);(lock(q);(print(ReadHeap{v2});unlock(q))))))))))))))|
+~ SYMBOL TABLE ~
+x -> 0
+q -> 0
+v2 -> ReferenceValue{0 -> int}
+v1 -> ReferenceValue{304637242 -> int}
+
+~ OUTPUT ~
+
+~ FILE TABLE ~
+
+~ HEAP ~
+304637242 -> 20
+
+~ LOCK TABLE ~
+{}
+
+ID: -361774694
+
+~ EXECUTION STACK ~
+New{v2, 30}|(newLock(x);(Fork{
+(Fork{
+(lock(x);(WriteHeap{v1, ReadHeap{v1}-1};unlock(x)))
+};(lock(x);(WriteHeap{v1, ReadHeap{v1}*10};unlock(x))))
+};(newLock(q);(Fork{
+(Fork{
+(lock(q);(WriteHeap{v2, ReadHeap{v2}+5};unlock(q)))
+};(lock(q);(WriteHeap{v2, ReadHeap{v2}*10};unlock(q))))
+};(no operation;(no operation;(no operation;(no operation;(lock(x);(print(ReadHeap{v1});(unlock(x);(lock(q);(print(ReadHeap{v2});unlock(q))))))))))))))|
+~ SYMBOL TABLE ~
+x -> 0
+q -> 0
+v2 -> ReferenceValue{0 -> int}
+v1 -> ReferenceValue{304637242 -> int}
+
+~ OUTPUT ~
+
+~ FILE TABLE ~
+
+~ HEAP ~
+304637242 -> 20
+
+~ LOCK TABLE ~
+{}
+
+ID: -361774694
+
+~ EXECUTION STACK ~
+(newLock(x);(Fork{
+(Fork{
+(lock(x);(WriteHeap{v1, ReadHeap{v1}-1};unlock(x)))
+};(lock(x);(WriteHeap{v1, ReadHeap{v1}*10};unlock(x))))
+};(newLock(q);(Fork{
+(Fork{
+(lock(q);(WriteHeap{v2, ReadHeap{v2}+5};unlock(q)))
+};(lock(q);(WriteHeap{v2, ReadHeap{v2}*10};unlock(q))))
+};(no operation;(no operation;(no operation;(no operation;(lock(x);(print(ReadHeap{v1});(unlock(x);(lock(q);(print(ReadHeap{v2});unlock(q))))))))))))))|
+~ SYMBOL TABLE ~
+x -> 0
+q -> 0
+v2 -> ReferenceValue{1653172735 -> int}
+v1 -> ReferenceValue{304637242 -> int}
+
+~ OUTPUT ~
+
+~ FILE TABLE ~
+
+~ HEAP ~
+304637242 -> 20
+1653172735 -> 30
+
+~ LOCK TABLE ~
+{}
+
+ID: -361774694
+
+~ EXECUTION STACK ~
+(newLock(x);(Fork{
+(Fork{
+(lock(x);(WriteHeap{v1, ReadHeap{v1}-1};unlock(x)))
+};(lock(x);(WriteHeap{v1, ReadHeap{v1}*10};unlock(x))))
+};(newLock(q);(Fork{
+(Fork{
+(lock(q);(WriteHeap{v2, ReadHeap{v2}+5};unlock(q)))
+};(lock(q);(WriteHeap{v2, ReadHeap{v2}*10};unlock(q))))
+};(no operation;(no operation;(no operation;(no operation;(lock(x);(print(ReadHeap{v1});(unlock(x);(lock(q);(print(ReadHeap{v2});unlock(q))))))))))))))|
+~ SYMBOL TABLE ~
+x -> 0
+q -> 0
+v2 -> ReferenceValue{1653172735 -> int}
+v1 -> ReferenceValue{304637242 -> int}
+
+~ OUTPUT ~
+
+~ FILE TABLE ~
+
+~ HEAP ~
+304637242 -> 20
+1653172735 -> 30
+
+~ LOCK TABLE ~
+{}
+
+ID: -361774694
+
+~ EXECUTION STACK ~
+newLock(x)|(Fork{
+(Fork{
+(lock(x);(WriteHeap{v1, ReadHeap{v1}-1};unlock(x)))
+};(lock(x);(WriteHeap{v1, ReadHeap{v1}*10};unlock(x))))
+};(newLock(q);(Fork{
+(Fork{
+(lock(q);(WriteHeap{v2, ReadHeap{v2}+5};unlock(q)))
+};(lock(q);(WriteHeap{v2, ReadHeap{v2}*10};unlock(q))))
+};(no operation;(no operation;(no operation;(no operation;(lock(x);(print(ReadHeap{v1});(unlock(x);(lock(q);(print(ReadHeap{v2});unlock(q)))))))))))))|
+~ SYMBOL TABLE ~
+x -> 0
+q -> 0
+v2 -> ReferenceValue{1653172735 -> int}
+v1 -> ReferenceValue{304637242 -> int}
+
+~ OUTPUT ~
+
+~ FILE TABLE ~
+
+~ HEAP ~
+304637242 -> 20
+1653172735 -> 30
+
+~ LOCK TABLE ~
+{}
+
+ID: -361774694
+
+~ EXECUTION STACK ~
+newLock(x)|(Fork{
+(Fork{
+(lock(x);(WriteHeap{v1, ReadHeap{v1}-1};unlock(x)))
+};(lock(x);(WriteHeap{v1, ReadHeap{v1}*10};unlock(x))))
+};(newLock(q);(Fork{
+(Fork{
+(lock(q);(WriteHeap{v2, ReadHeap{v2}+5};unlock(q)))
+};(lock(q);(WriteHeap{v2, ReadHeap{v2}*10};unlock(q))))
+};(no operation;(no operation;(no operation;(no operation;(lock(x);(print(ReadHeap{v1});(unlock(x);(lock(q);(print(ReadHeap{v2});unlock(q)))))))))))))|
+~ SYMBOL TABLE ~
+x -> 0
+q -> 0
+v2 -> ReferenceValue{1653172735 -> int}
+v1 -> ReferenceValue{304637242 -> int}
+
+~ OUTPUT ~
+
+~ FILE TABLE ~
+
+~ HEAP ~
+304637242 -> 20
+1653172735 -> 30
+
+~ LOCK TABLE ~
+{}
+
+ID: -361774694
+
+~ EXECUTION STACK ~
+(Fork{
+(Fork{
+(lock(x);(WriteHeap{v1, ReadHeap{v1}-1};unlock(x)))
+};(lock(x);(WriteHeap{v1, ReadHeap{v1}*10};unlock(x))))
+};(newLock(q);(Fork{
+(Fork{
+(lock(q);(WriteHeap{v2, ReadHeap{v2}+5};unlock(q)))
+};(lock(q);(WriteHeap{v2, ReadHeap{v2}*10};unlock(q))))
+};(no operation;(no operation;(no operation;(no operation;(lock(x);(print(ReadHeap{v1});(unlock(x);(lock(q);(print(ReadHeap{v2});unlock(q)))))))))))))|
+~ SYMBOL TABLE ~
+x -> 1
+q -> 0
+v2 -> ReferenceValue{1653172735 -> int}
+v1 -> ReferenceValue{304637242 -> int}
+
+~ OUTPUT ~
+
+~ FILE TABLE ~
+
+~ HEAP ~
+304637242 -> 20
+1653172735 -> 30
+
+~ LOCK TABLE ~
+{1=-1}
+
+ID: -361774694
+
+~ EXECUTION STACK ~
+(Fork{
+(Fork{
+(lock(x);(WriteHeap{v1, ReadHeap{v1}-1};unlock(x)))
+};(lock(x);(WriteHeap{v1, ReadHeap{v1}*10};unlock(x))))
+};(newLock(q);(Fork{
+(Fork{
+(lock(q);(WriteHeap{v2, ReadHeap{v2}+5};unlock(q)))
+};(lock(q);(WriteHeap{v2, ReadHeap{v2}*10};unlock(q))))
+};(no operation;(no operation;(no operation;(no operation;(lock(x);(print(ReadHeap{v1});(unlock(x);(lock(q);(print(ReadHeap{v2});unlock(q)))))))))))))|
+~ SYMBOL TABLE ~
+x -> 1
+q -> 0
+v2 -> ReferenceValue{1653172735 -> int}
+v1 -> ReferenceValue{304637242 -> int}
+
+~ OUTPUT ~
+
+~ FILE TABLE ~
+
+~ HEAP ~
+304637242 -> 20
+1653172735 -> 30
+
+~ LOCK TABLE ~
+{1=-1}
+
+ID: -361774694
+
+~ EXECUTION STACK ~
+Fork{
+(Fork{
+(lock(x);(WriteHeap{v1, ReadHeap{v1}-1};unlock(x)))
+};(lock(x);(WriteHeap{v1, ReadHeap{v1}*10};unlock(x))))
+}|(newLock(q);(Fork{
+(Fork{
+(lock(q);(WriteHeap{v2, ReadHeap{v2}+5};unlock(q)))
+};(lock(q);(WriteHeap{v2, ReadHeap{v2}*10};unlock(q))))
+};(no operation;(no operation;(no operation;(no operation;(lock(x);(print(ReadHeap{v1});(unlock(x);(lock(q);(print(ReadHeap{v2});unlock(q))))))))))))|
+~ SYMBOL TABLE ~
+x -> 1
+q -> 0
+v2 -> ReferenceValue{1653172735 -> int}
+v1 -> ReferenceValue{304637242 -> int}
+
+~ OUTPUT ~
+
+~ FILE TABLE ~
+
+~ HEAP ~
+304637242 -> 20
+1653172735 -> 30
+
+~ LOCK TABLE ~
+{1=-1}
+
+ID: -361774694
+
+~ EXECUTION STACK ~
+Fork{
+(Fork{
+(lock(x);(WriteHeap{v1, ReadHeap{v1}-1};unlock(x)))
+};(lock(x);(WriteHeap{v1, ReadHeap{v1}*10};unlock(x))))
+}|(newLock(q);(Fork{
+(Fork{
+(lock(q);(WriteHeap{v2, ReadHeap{v2}+5};unlock(q)))
+};(lock(q);(WriteHeap{v2, ReadHeap{v2}*10};unlock(q))))
+};(no operation;(no operation;(no operation;(no operation;(lock(x);(print(ReadHeap{v1});(unlock(x);(lock(q);(print(ReadHeap{v2});unlock(q))))))))))))|
+~ SYMBOL TABLE ~
+x -> 1
+q -> 0
+v2 -> ReferenceValue{1653172735 -> int}
+v1 -> ReferenceValue{304637242 -> int}
+
+~ OUTPUT ~
+
+~ FILE TABLE ~
+
+~ HEAP ~
+304637242 -> 20
+1653172735 -> 30
+
+~ LOCK TABLE ~
+{1=-1}
+
+ID: -361774694
+
+~ EXECUTION STACK ~
+(newLock(q);(Fork{
+(Fork{
+(lock(q);(WriteHeap{v2, ReadHeap{v2}+5};unlock(q)))
+};(lock(q);(WriteHeap{v2, ReadHeap{v2}*10};unlock(q))))
+};(no operation;(no operation;(no operation;(no operation;(lock(x);(print(ReadHeap{v1});(unlock(x);(lock(q);(print(ReadHeap{v2});unlock(q))))))))))))|
+~ SYMBOL TABLE ~
+x -> 1
+q -> 0
+v2 -> ReferenceValue{1653172735 -> int}
+v1 -> ReferenceValue{304637242 -> int}
+
+~ OUTPUT ~
+
+~ FILE TABLE ~
+
+~ HEAP ~
+304637242 -> 20
+1653172735 -> 30
+
+~ LOCK TABLE ~
+{1=-1}
+
+ID: 0
+
+~ EXECUTION STACK ~
+(Fork{
+(lock(x);(WriteHeap{v1, ReadHeap{v1}-1};unlock(x)))
+};(lock(x);(WriteHeap{v1, ReadHeap{v1}*10};unlock(x))))|
+~ SYMBOL TABLE ~
+x -> 1
+q -> 0
+v2 -> ReferenceValue{1653172735 -> int}
+v1 -> ReferenceValue{304637242 -> int}
+
+~ OUTPUT ~
+
+~ FILE TABLE ~
+
+~ HEAP ~
+304637242 -> 20
+1653172735 -> 30
+
+~ LOCK TABLE ~
+{1=-1}
+
+ID: -2045891644
+
+~ EXECUTION STACK ~
+(Ref(int) v1;(Ref(int) v2;(int x;(int q;(New{v1, 20};(New{v2, 30};(newLock(x);(Fork{
+(Fork{
+(lock(x);(WriteHeap{v1, ReadHeap{v1}-1};unlock(x)))
+};(lock(x);(WriteHeap{v1, ReadHeap{v1}*10};unlock(x))))
+};(newLock(q);(Fork{
+(Fork{
+(lock(q);(WriteHeap{v2, ReadHeap{v2}+5};unlock(q)))
+};(lock(q);(WriteHeap{v2, ReadHeap{v2}*10};unlock(q))))
+};(no operation;(no operation;(no operation;(no operation;(lock(x);(print(ReadHeap{v1});(unlock(x);(lock(q);(print(ReadHeap{v2});unlock(q))))))))))))))))))))|
+~ SYMBOL TABLE ~
+
+~ OUTPUT ~
+
+~ FILE TABLE ~
+
+~ HEAP ~
+
+~ LOCK TABLE ~
+{}
+
+ID: -2045891644
+
+~ EXECUTION STACK ~
+Ref(int) v1|(Ref(int) v2;(int x;(int q;(New{v1, 20};(New{v2, 30};(newLock(x);(Fork{
+(Fork{
+(lock(x);(WriteHeap{v1, ReadHeap{v1}-1};unlock(x)))
+};(lock(x);(WriteHeap{v1, ReadHeap{v1}*10};unlock(x))))
+};(newLock(q);(Fork{
+(Fork{
+(lock(q);(WriteHeap{v2, ReadHeap{v2}+5};unlock(q)))
+};(lock(q);(WriteHeap{v2, ReadHeap{v2}*10};unlock(q))))
+};(no operation;(no operation;(no operation;(no operation;(lock(x);(print(ReadHeap{v1});(unlock(x);(lock(q);(print(ReadHeap{v2});unlock(q)))))))))))))))))))|
+~ SYMBOL TABLE ~
+
+~ OUTPUT ~
+
+~ FILE TABLE ~
+
+~ HEAP ~
+
+~ LOCK TABLE ~
+{}
+
+ID: -2045891644
+
+~ EXECUTION STACK ~
+Ref(int) v1|(Ref(int) v2;(int x;(int q;(New{v1, 20};(New{v2, 30};(newLock(x);(Fork{
+(Fork{
+(lock(x);(WriteHeap{v1, ReadHeap{v1}-1};unlock(x)))
+};(lock(x);(WriteHeap{v1, ReadHeap{v1}*10};unlock(x))))
+};(newLock(q);(Fork{
+(Fork{
+(lock(q);(WriteHeap{v2, ReadHeap{v2}+5};unlock(q)))
+};(lock(q);(WriteHeap{v2, ReadHeap{v2}*10};unlock(q))))
+};(no operation;(no operation;(no operation;(no operation;(lock(x);(print(ReadHeap{v1});(unlock(x);(lock(q);(print(ReadHeap{v2});unlock(q)))))))))))))))))))|
+~ SYMBOL TABLE ~
+
+~ OUTPUT ~
+
+~ FILE TABLE ~
+
+~ HEAP ~
+
+~ LOCK TABLE ~
+{}
+
+ID: -2045891644
+
+~ EXECUTION STACK ~
+(Ref(int) v2;(int x;(int q;(New{v1, 20};(New{v2, 30};(newLock(x);(Fork{
+(Fork{
+(lock(x);(WriteHeap{v1, ReadHeap{v1}-1};unlock(x)))
+};(lock(x);(WriteHeap{v1, ReadHeap{v1}*10};unlock(x))))
+};(newLock(q);(Fork{
+(Fork{
+(lock(q);(WriteHeap{v2, ReadHeap{v2}+5};unlock(q)))
+};(lock(q);(WriteHeap{v2, ReadHeap{v2}*10};unlock(q))))
+};(no operation;(no operation;(no operation;(no operation;(lock(x);(print(ReadHeap{v1});(unlock(x);(lock(q);(print(ReadHeap{v2});unlock(q)))))))))))))))))))|
+~ SYMBOL TABLE ~
+v1 -> ReferenceValue{0 -> int}
+
+~ OUTPUT ~
+
+~ FILE TABLE ~
+
+~ HEAP ~
+
+~ LOCK TABLE ~
+{}
+
+ID: -2045891644
+
+~ EXECUTION STACK ~
+(Ref(int) v2;(int x;(int q;(New{v1, 20};(New{v2, 30};(newLock(x);(Fork{
+(Fork{
+(lock(x);(WriteHeap{v1, ReadHeap{v1}-1};unlock(x)))
+};(lock(x);(WriteHeap{v1, ReadHeap{v1}*10};unlock(x))))
+};(newLock(q);(Fork{
+(Fork{
+(lock(q);(WriteHeap{v2, ReadHeap{v2}+5};unlock(q)))
+};(lock(q);(WriteHeap{v2, ReadHeap{v2}*10};unlock(q))))
+};(no operation;(no operation;(no operation;(no operation;(lock(x);(print(ReadHeap{v1});(unlock(x);(lock(q);(print(ReadHeap{v2});unlock(q)))))))))))))))))))|
+~ SYMBOL TABLE ~
+v1 -> ReferenceValue{0 -> int}
+
+~ OUTPUT ~
+
+~ FILE TABLE ~
+
+~ HEAP ~
+
+~ LOCK TABLE ~
+{}
+
+ID: -2045891644
+
+~ EXECUTION STACK ~
+Ref(int) v2|(int x;(int q;(New{v1, 20};(New{v2, 30};(newLock(x);(Fork{
+(Fork{
+(lock(x);(WriteHeap{v1, ReadHeap{v1}-1};unlock(x)))
+};(lock(x);(WriteHeap{v1, ReadHeap{v1}*10};unlock(x))))
+};(newLock(q);(Fork{
+(Fork{
+(lock(q);(WriteHeap{v2, ReadHeap{v2}+5};unlock(q)))
+};(lock(q);(WriteHeap{v2, ReadHeap{v2}*10};unlock(q))))
+};(no operation;(no operation;(no operation;(no operation;(lock(x);(print(ReadHeap{v1});(unlock(x);(lock(q);(print(ReadHeap{v2});unlock(q))))))))))))))))))|
+~ SYMBOL TABLE ~
+v1 -> ReferenceValue{0 -> int}
+
+~ OUTPUT ~
+
+~ FILE TABLE ~
+
+~ HEAP ~
+
+~ LOCK TABLE ~
+{}
+
+ID: -2045891644
+
+~ EXECUTION STACK ~
+Ref(int) v2|(int x;(int q;(New{v1, 20};(New{v2, 30};(newLock(x);(Fork{
+(Fork{
+(lock(x);(WriteHeap{v1, ReadHeap{v1}-1};unlock(x)))
+};(lock(x);(WriteHeap{v1, ReadHeap{v1}*10};unlock(x))))
+};(newLock(q);(Fork{
+(Fork{
+(lock(q);(WriteHeap{v2, ReadHeap{v2}+5};unlock(q)))
+};(lock(q);(WriteHeap{v2, ReadHeap{v2}*10};unlock(q))))
+};(no operation;(no operation;(no operation;(no operation;(lock(x);(print(ReadHeap{v1});(unlock(x);(lock(q);(print(ReadHeap{v2});unlock(q))))))))))))))))))|
+~ SYMBOL TABLE ~
+v1 -> ReferenceValue{0 -> int}
+
+~ OUTPUT ~
+
+~ FILE TABLE ~
+
+~ HEAP ~
+
+~ LOCK TABLE ~
+{}
+
+ID: -2045891644
+
+~ EXECUTION STACK ~
+(int x;(int q;(New{v1, 20};(New{v2, 30};(newLock(x);(Fork{
+(Fork{
+(lock(x);(WriteHeap{v1, ReadHeap{v1}-1};unlock(x)))
+};(lock(x);(WriteHeap{v1, ReadHeap{v1}*10};unlock(x))))
+};(newLock(q);(Fork{
+(Fork{
+(lock(q);(WriteHeap{v2, ReadHeap{v2}+5};unlock(q)))
+};(lock(q);(WriteHeap{v2, ReadHeap{v2}*10};unlock(q))))
+};(no operation;(no operation;(no operation;(no operation;(lock(x);(print(ReadHeap{v1});(unlock(x);(lock(q);(print(ReadHeap{v2});unlock(q))))))))))))))))))|
+~ SYMBOL TABLE ~
+v2 -> ReferenceValue{0 -> int}
+v1 -> ReferenceValue{0 -> int}
+
+~ OUTPUT ~
+
+~ FILE TABLE ~
+
+~ HEAP ~
+
+~ LOCK TABLE ~
+{}
+
+ID: -2045891644
+
+~ EXECUTION STACK ~
+(int x;(int q;(New{v1, 20};(New{v2, 30};(newLock(x);(Fork{
+(Fork{
+(lock(x);(WriteHeap{v1, ReadHeap{v1}-1};unlock(x)))
+};(lock(x);(WriteHeap{v1, ReadHeap{v1}*10};unlock(x))))
+};(newLock(q);(Fork{
+(Fork{
+(lock(q);(WriteHeap{v2, ReadHeap{v2}+5};unlock(q)))
+};(lock(q);(WriteHeap{v2, ReadHeap{v2}*10};unlock(q))))
+};(no operation;(no operation;(no operation;(no operation;(lock(x);(print(ReadHeap{v1});(unlock(x);(lock(q);(print(ReadHeap{v2});unlock(q))))))))))))))))))|
+~ SYMBOL TABLE ~
+v2 -> ReferenceValue{0 -> int}
+v1 -> ReferenceValue{0 -> int}
+
+~ OUTPUT ~
+
+~ FILE TABLE ~
+
+~ HEAP ~
+
+~ LOCK TABLE ~
+{}
+
+ID: -2045891644
+
+~ EXECUTION STACK ~
+int x|(int q;(New{v1, 20};(New{v2, 30};(newLock(x);(Fork{
+(Fork{
+(lock(x);(WriteHeap{v1, ReadHeap{v1}-1};unlock(x)))
+};(lock(x);(WriteHeap{v1, ReadHeap{v1}*10};unlock(x))))
+};(newLock(q);(Fork{
+(Fork{
+(lock(q);(WriteHeap{v2, ReadHeap{v2}+5};unlock(q)))
+};(lock(q);(WriteHeap{v2, ReadHeap{v2}*10};unlock(q))))
+};(no operation;(no operation;(no operation;(no operation;(lock(x);(print(ReadHeap{v1});(unlock(x);(lock(q);(print(ReadHeap{v2});unlock(q)))))))))))))))))|
+~ SYMBOL TABLE ~
+v2 -> ReferenceValue{0 -> int}
+v1 -> ReferenceValue{0 -> int}
+
+~ OUTPUT ~
+
+~ FILE TABLE ~
+
+~ HEAP ~
+
+~ LOCK TABLE ~
+{}
+
+ID: -2045891644
+
+~ EXECUTION STACK ~
+int x|(int q;(New{v1, 20};(New{v2, 30};(newLock(x);(Fork{
+(Fork{
+(lock(x);(WriteHeap{v1, ReadHeap{v1}-1};unlock(x)))
+};(lock(x);(WriteHeap{v1, ReadHeap{v1}*10};unlock(x))))
+};(newLock(q);(Fork{
+(Fork{
+(lock(q);(WriteHeap{v2, ReadHeap{v2}+5};unlock(q)))
+};(lock(q);(WriteHeap{v2, ReadHeap{v2}*10};unlock(q))))
+};(no operation;(no operation;(no operation;(no operation;(lock(x);(print(ReadHeap{v1});(unlock(x);(lock(q);(print(ReadHeap{v2});unlock(q)))))))))))))))))|
+~ SYMBOL TABLE ~
+v2 -> ReferenceValue{0 -> int}
+v1 -> ReferenceValue{0 -> int}
+
+~ OUTPUT ~
+
+~ FILE TABLE ~
+
+~ HEAP ~
+
+~ LOCK TABLE ~
+{}
+
+ID: -2045891644
+
+~ EXECUTION STACK ~
+(int q;(New{v1, 20};(New{v2, 30};(newLock(x);(Fork{
+(Fork{
+(lock(x);(WriteHeap{v1, ReadHeap{v1}-1};unlock(x)))
+};(lock(x);(WriteHeap{v1, ReadHeap{v1}*10};unlock(x))))
+};(newLock(q);(Fork{
+(Fork{
+(lock(q);(WriteHeap{v2, ReadHeap{v2}+5};unlock(q)))
+};(lock(q);(WriteHeap{v2, ReadHeap{v2}*10};unlock(q))))
+};(no operation;(no operation;(no operation;(no operation;(lock(x);(print(ReadHeap{v1});(unlock(x);(lock(q);(print(ReadHeap{v2});unlock(q)))))))))))))))))|
+~ SYMBOL TABLE ~
+x -> 0
+v2 -> ReferenceValue{0 -> int}
+v1 -> ReferenceValue{0 -> int}
+
+~ OUTPUT ~
+
+~ FILE TABLE ~
+
+~ HEAP ~
+
+~ LOCK TABLE ~
+{}
+
+ID: -2045891644
+
+~ EXECUTION STACK ~
+(int q;(New{v1, 20};(New{v2, 30};(newLock(x);(Fork{
+(Fork{
+(lock(x);(WriteHeap{v1, ReadHeap{v1}-1};unlock(x)))
+};(lock(x);(WriteHeap{v1, ReadHeap{v1}*10};unlock(x))))
+};(newLock(q);(Fork{
+(Fork{
+(lock(q);(WriteHeap{v2, ReadHeap{v2}+5};unlock(q)))
+};(lock(q);(WriteHeap{v2, ReadHeap{v2}*10};unlock(q))))
+};(no operation;(no operation;(no operation;(no operation;(lock(x);(print(ReadHeap{v1});(unlock(x);(lock(q);(print(ReadHeap{v2});unlock(q)))))))))))))))))|
+~ SYMBOL TABLE ~
+x -> 0
+v2 -> ReferenceValue{0 -> int}
+v1 -> ReferenceValue{0 -> int}
+
+~ OUTPUT ~
+
+~ FILE TABLE ~
+
+~ HEAP ~
+
+~ LOCK TABLE ~
+{}
+
+ID: -2045891644
+
+~ EXECUTION STACK ~
+int q|(New{v1, 20};(New{v2, 30};(newLock(x);(Fork{
+(Fork{
+(lock(x);(WriteHeap{v1, ReadHeap{v1}-1};unlock(x)))
+};(lock(x);(WriteHeap{v1, ReadHeap{v1}*10};unlock(x))))
+};(newLock(q);(Fork{
+(Fork{
+(lock(q);(WriteHeap{v2, ReadHeap{v2}+5};unlock(q)))
+};(lock(q);(WriteHeap{v2, ReadHeap{v2}*10};unlock(q))))
+};(no operation;(no operation;(no operation;(no operation;(lock(x);(print(ReadHeap{v1});(unlock(x);(lock(q);(print(ReadHeap{v2});unlock(q))))))))))))))))|
+~ SYMBOL TABLE ~
+x -> 0
+v2 -> ReferenceValue{0 -> int}
+v1 -> ReferenceValue{0 -> int}
+
+~ OUTPUT ~
+
+~ FILE TABLE ~
+
+~ HEAP ~
+
+~ LOCK TABLE ~
+{}
+
+ID: -2045891644
+
+~ EXECUTION STACK ~
+int q|(New{v1, 20};(New{v2, 30};(newLock(x);(Fork{
+(Fork{
+(lock(x);(WriteHeap{v1, ReadHeap{v1}-1};unlock(x)))
+};(lock(x);(WriteHeap{v1, ReadHeap{v1}*10};unlock(x))))
+};(newLock(q);(Fork{
+(Fork{
+(lock(q);(WriteHeap{v2, ReadHeap{v2}+5};unlock(q)))
+};(lock(q);(WriteHeap{v2, ReadHeap{v2}*10};unlock(q))))
+};(no operation;(no operation;(no operation;(no operation;(lock(x);(print(ReadHeap{v1});(unlock(x);(lock(q);(print(ReadHeap{v2});unlock(q))))))))))))))))|
+~ SYMBOL TABLE ~
+x -> 0
+v2 -> ReferenceValue{0 -> int}
+v1 -> ReferenceValue{0 -> int}
+
+~ OUTPUT ~
+
+~ FILE TABLE ~
+
+~ HEAP ~
+
+~ LOCK TABLE ~
+{}
+
+ID: -2045891644
+
+~ EXECUTION STACK ~
+(New{v1, 20};(New{v2, 30};(newLock(x);(Fork{
+(Fork{
+(lock(x);(WriteHeap{v1, ReadHeap{v1}-1};unlock(x)))
+};(lock(x);(WriteHeap{v1, ReadHeap{v1}*10};unlock(x))))
+};(newLock(q);(Fork{
+(Fork{
+(lock(q);(WriteHeap{v2, ReadHeap{v2}+5};unlock(q)))
+};(lock(q);(WriteHeap{v2, ReadHeap{v2}*10};unlock(q))))
+};(no operation;(no operation;(no operation;(no operation;(lock(x);(print(ReadHeap{v1});(unlock(x);(lock(q);(print(ReadHeap{v2});unlock(q))))))))))))))))|
+~ SYMBOL TABLE ~
+x -> 0
+q -> 0
+v2 -> ReferenceValue{0 -> int}
+v1 -> ReferenceValue{0 -> int}
+
+~ OUTPUT ~
+
+~ FILE TABLE ~
+
+~ HEAP ~
+
+~ LOCK TABLE ~
+{}
+
+ID: -2045891644
+
+~ EXECUTION STACK ~
+(New{v1, 20};(New{v2, 30};(newLock(x);(Fork{
+(Fork{
+(lock(x);(WriteHeap{v1, ReadHeap{v1}-1};unlock(x)))
+};(lock(x);(WriteHeap{v1, ReadHeap{v1}*10};unlock(x))))
+};(newLock(q);(Fork{
+(Fork{
+(lock(q);(WriteHeap{v2, ReadHeap{v2}+5};unlock(q)))
+};(lock(q);(WriteHeap{v2, ReadHeap{v2}*10};unlock(q))))
+};(no operation;(no operation;(no operation;(no operation;(lock(x);(print(ReadHeap{v1});(unlock(x);(lock(q);(print(ReadHeap{v2});unlock(q))))))))))))))))|
+~ SYMBOL TABLE ~
+x -> 0
+q -> 0
+v2 -> ReferenceValue{0 -> int}
+v1 -> ReferenceValue{0 -> int}
+
+~ OUTPUT ~
+
+~ FILE TABLE ~
+
+~ HEAP ~
+
+~ LOCK TABLE ~
+{}
+
+ID: -2045891644
+
+~ EXECUTION STACK ~
+New{v1, 20}|(New{v2, 30};(newLock(x);(Fork{
+(Fork{
+(lock(x);(WriteHeap{v1, ReadHeap{v1}-1};unlock(x)))
+};(lock(x);(WriteHeap{v1, ReadHeap{v1}*10};unlock(x))))
+};(newLock(q);(Fork{
+(Fork{
+(lock(q);(WriteHeap{v2, ReadHeap{v2}+5};unlock(q)))
+};(lock(q);(WriteHeap{v2, ReadHeap{v2}*10};unlock(q))))
+};(no operation;(no operation;(no operation;(no operation;(lock(x);(print(ReadHeap{v1});(unlock(x);(lock(q);(print(ReadHeap{v2});unlock(q)))))))))))))))|
+~ SYMBOL TABLE ~
+x -> 0
+q -> 0
+v2 -> ReferenceValue{0 -> int}
+v1 -> ReferenceValue{0 -> int}
+
+~ OUTPUT ~
+
+~ FILE TABLE ~
+
+~ HEAP ~
+
+~ LOCK TABLE ~
+{}
+
+ID: -2045891644
+
+~ EXECUTION STACK ~
+New{v1, 20}|(New{v2, 30};(newLock(x);(Fork{
+(Fork{
+(lock(x);(WriteHeap{v1, ReadHeap{v1}-1};unlock(x)))
+};(lock(x);(WriteHeap{v1, ReadHeap{v1}*10};unlock(x))))
+};(newLock(q);(Fork{
+(Fork{
+(lock(q);(WriteHeap{v2, ReadHeap{v2}+5};unlock(q)))
+};(lock(q);(WriteHeap{v2, ReadHeap{v2}*10};unlock(q))))
+};(no operation;(no operation;(no operation;(no operation;(lock(x);(print(ReadHeap{v1});(unlock(x);(lock(q);(print(ReadHeap{v2});unlock(q)))))))))))))))|
+~ SYMBOL TABLE ~
+x -> 0
+q -> 0
+v2 -> ReferenceValue{0 -> int}
+v1 -> ReferenceValue{0 -> int}
+
+~ OUTPUT ~
+
+~ FILE TABLE ~
+
+~ HEAP ~
+
+~ LOCK TABLE ~
+{}
+
+ID: -2045891644
+
+~ EXECUTION STACK ~
+(New{v2, 30};(newLock(x);(Fork{
+(Fork{
+(lock(x);(WriteHeap{v1, ReadHeap{v1}-1};unlock(x)))
+};(lock(x);(WriteHeap{v1, ReadHeap{v1}*10};unlock(x))))
+};(newLock(q);(Fork{
+(Fork{
+(lock(q);(WriteHeap{v2, ReadHeap{v2}+5};unlock(q)))
+};(lock(q);(WriteHeap{v2, ReadHeap{v2}*10};unlock(q))))
+};(no operation;(no operation;(no operation;(no operation;(lock(x);(print(ReadHeap{v1});(unlock(x);(lock(q);(print(ReadHeap{v2});unlock(q)))))))))))))))|
+~ SYMBOL TABLE ~
+x -> 0
+q -> 0
+v2 -> ReferenceValue{0 -> int}
+v1 -> ReferenceValue{1006288561 -> int}
+
+~ OUTPUT ~
+
+~ FILE TABLE ~
+
+~ HEAP ~
+1006288561 -> 20
+
+~ LOCK TABLE ~
+{}
+
+ID: -2045891644
+
+~ EXECUTION STACK ~
+(New{v2, 30};(newLock(x);(Fork{
+(Fork{
+(lock(x);(WriteHeap{v1, ReadHeap{v1}-1};unlock(x)))
+};(lock(x);(WriteHeap{v1, ReadHeap{v1}*10};unlock(x))))
+};(newLock(q);(Fork{
+(Fork{
+(lock(q);(WriteHeap{v2, ReadHeap{v2}+5};unlock(q)))
+};(lock(q);(WriteHeap{v2, ReadHeap{v2}*10};unlock(q))))
+};(no operation;(no operation;(no operation;(no operation;(lock(x);(print(ReadHeap{v1});(unlock(x);(lock(q);(print(ReadHeap{v2});unlock(q)))))))))))))))|
+~ SYMBOL TABLE ~
+x -> 0
+q -> 0
+v2 -> ReferenceValue{0 -> int}
+v1 -> ReferenceValue{1006288561 -> int}
+
+~ OUTPUT ~
+
+~ FILE TABLE ~
+
+~ HEAP ~
+1006288561 -> 20
+
+~ LOCK TABLE ~
+{}
+
+ID: -2045891644
+
+~ EXECUTION STACK ~
+New{v2, 30}|(newLock(x);(Fork{
+(Fork{
+(lock(x);(WriteHeap{v1, ReadHeap{v1}-1};unlock(x)))
+};(lock(x);(WriteHeap{v1, ReadHeap{v1}*10};unlock(x))))
+};(newLock(q);(Fork{
+(Fork{
+(lock(q);(WriteHeap{v2, ReadHeap{v2}+5};unlock(q)))
+};(lock(q);(WriteHeap{v2, ReadHeap{v2}*10};unlock(q))))
+};(no operation;(no operation;(no operation;(no operation;(lock(x);(print(ReadHeap{v1});(unlock(x);(lock(q);(print(ReadHeap{v2});unlock(q))))))))))))))|
+~ SYMBOL TABLE ~
+x -> 0
+q -> 0
+v2 -> ReferenceValue{0 -> int}
+v1 -> ReferenceValue{1006288561 -> int}
+
+~ OUTPUT ~
+
+~ FILE TABLE ~
+
+~ HEAP ~
+1006288561 -> 20
+
+~ LOCK TABLE ~
+{}
+
+ID: -2045891644
+
+~ EXECUTION STACK ~
+New{v2, 30}|(newLock(x);(Fork{
+(Fork{
+(lock(x);(WriteHeap{v1, ReadHeap{v1}-1};unlock(x)))
+};(lock(x);(WriteHeap{v1, ReadHeap{v1}*10};unlock(x))))
+};(newLock(q);(Fork{
+(Fork{
+(lock(q);(WriteHeap{v2, ReadHeap{v2}+5};unlock(q)))
+};(lock(q);(WriteHeap{v2, ReadHeap{v2}*10};unlock(q))))
+};(no operation;(no operation;(no operation;(no operation;(lock(x);(print(ReadHeap{v1});(unlock(x);(lock(q);(print(ReadHeap{v2});unlock(q))))))))))))))|
+~ SYMBOL TABLE ~
+x -> 0
+q -> 0
+v2 -> ReferenceValue{0 -> int}
+v1 -> ReferenceValue{1006288561 -> int}
+
+~ OUTPUT ~
+
+~ FILE TABLE ~
+
+~ HEAP ~
+1006288561 -> 20
+
+~ LOCK TABLE ~
+{}
+
+ID: -2045891644
+
+~ EXECUTION STACK ~
+(newLock(x);(Fork{
+(Fork{
+(lock(x);(WriteHeap{v1, ReadHeap{v1}-1};unlock(x)))
+};(lock(x);(WriteHeap{v1, ReadHeap{v1}*10};unlock(x))))
+};(newLock(q);(Fork{
+(Fork{
+(lock(q);(WriteHeap{v2, ReadHeap{v2}+5};unlock(q)))
+};(lock(q);(WriteHeap{v2, ReadHeap{v2}*10};unlock(q))))
+};(no operation;(no operation;(no operation;(no operation;(lock(x);(print(ReadHeap{v1});(unlock(x);(lock(q);(print(ReadHeap{v2});unlock(q))))))))))))))|
+~ SYMBOL TABLE ~
+x -> 0
+q -> 0
+v2 -> ReferenceValue{451090768 -> int}
+v1 -> ReferenceValue{1006288561 -> int}
+
+~ OUTPUT ~
+
+~ FILE TABLE ~
+
+~ HEAP ~
+451090768 -> 30
+1006288561 -> 20
+
+~ LOCK TABLE ~
+{}
+
+ID: -2045891644
+
+~ EXECUTION STACK ~
+(newLock(x);(Fork{
+(Fork{
+(lock(x);(WriteHeap{v1, ReadHeap{v1}-1};unlock(x)))
+};(lock(x);(WriteHeap{v1, ReadHeap{v1}*10};unlock(x))))
+};(newLock(q);(Fork{
+(Fork{
+(lock(q);(WriteHeap{v2, ReadHeap{v2}+5};unlock(q)))
+};(lock(q);(WriteHeap{v2, ReadHeap{v2}*10};unlock(q))))
+};(no operation;(no operation;(no operation;(no operation;(lock(x);(print(ReadHeap{v1});(unlock(x);(lock(q);(print(ReadHeap{v2});unlock(q))))))))))))))|
+~ SYMBOL TABLE ~
+x -> 0
+q -> 0
+v2 -> ReferenceValue{451090768 -> int}
+v1 -> ReferenceValue{1006288561 -> int}
+
+~ OUTPUT ~
+
+~ FILE TABLE ~
+
+~ HEAP ~
+451090768 -> 30
+1006288561 -> 20
+
+~ LOCK TABLE ~
+{}
+
+ID: -2045891644
+
+~ EXECUTION STACK ~
+newLock(x)|(Fork{
+(Fork{
+(lock(x);(WriteHeap{v1, ReadHeap{v1}-1};unlock(x)))
+};(lock(x);(WriteHeap{v1, ReadHeap{v1}*10};unlock(x))))
+};(newLock(q);(Fork{
+(Fork{
+(lock(q);(WriteHeap{v2, ReadHeap{v2}+5};unlock(q)))
+};(lock(q);(WriteHeap{v2, ReadHeap{v2}*10};unlock(q))))
+};(no operation;(no operation;(no operation;(no operation;(lock(x);(print(ReadHeap{v1});(unlock(x);(lock(q);(print(ReadHeap{v2});unlock(q)))))))))))))|
+~ SYMBOL TABLE ~
+x -> 0
+q -> 0
+v2 -> ReferenceValue{451090768 -> int}
+v1 -> ReferenceValue{1006288561 -> int}
+
+~ OUTPUT ~
+
+~ FILE TABLE ~
+
+~ HEAP ~
+451090768 -> 30
+1006288561 -> 20
+
+~ LOCK TABLE ~
+{}
+
+ID: -2045891644
+
+~ EXECUTION STACK ~
+newLock(x)|(Fork{
+(Fork{
+(lock(x);(WriteHeap{v1, ReadHeap{v1}-1};unlock(x)))
+};(lock(x);(WriteHeap{v1, ReadHeap{v1}*10};unlock(x))))
+};(newLock(q);(Fork{
+(Fork{
+(lock(q);(WriteHeap{v2, ReadHeap{v2}+5};unlock(q)))
+};(lock(q);(WriteHeap{v2, ReadHeap{v2}*10};unlock(q))))
+};(no operation;(no operation;(no operation;(no operation;(lock(x);(print(ReadHeap{v1});(unlock(x);(lock(q);(print(ReadHeap{v2});unlock(q)))))))))))))|
+~ SYMBOL TABLE ~
+x -> 0
+q -> 0
+v2 -> ReferenceValue{451090768 -> int}
+v1 -> ReferenceValue{1006288561 -> int}
+
+~ OUTPUT ~
+
+~ FILE TABLE ~
+
+~ HEAP ~
+451090768 -> 30
+1006288561 -> 20
+
+~ LOCK TABLE ~
+{}
+
+ID: -2045891644
+
+~ EXECUTION STACK ~
+(Fork{
+(Fork{
+(lock(x);(WriteHeap{v1, ReadHeap{v1}-1};unlock(x)))
+};(lock(x);(WriteHeap{v1, ReadHeap{v1}*10};unlock(x))))
+};(newLock(q);(Fork{
+(Fork{
+(lock(q);(WriteHeap{v2, ReadHeap{v2}+5};unlock(q)))
+};(lock(q);(WriteHeap{v2, ReadHeap{v2}*10};unlock(q))))
+};(no operation;(no operation;(no operation;(no operation;(lock(x);(print(ReadHeap{v1});(unlock(x);(lock(q);(print(ReadHeap{v2});unlock(q)))))))))))))|
+~ SYMBOL TABLE ~
+x -> 1
+q -> 0
+v2 -> ReferenceValue{451090768 -> int}
+v1 -> ReferenceValue{1006288561 -> int}
+
+~ OUTPUT ~
+
+~ FILE TABLE ~
+
+~ HEAP ~
+451090768 -> 30
+1006288561 -> 20
+
+~ LOCK TABLE ~
+{1=-1}
+
+ID: -2045891644
+
+~ EXECUTION STACK ~
+(Fork{
+(Fork{
+(lock(x);(WriteHeap{v1, ReadHeap{v1}-1};unlock(x)))
+};(lock(x);(WriteHeap{v1, ReadHeap{v1}*10};unlock(x))))
+};(newLock(q);(Fork{
+(Fork{
+(lock(q);(WriteHeap{v2, ReadHeap{v2}+5};unlock(q)))
+};(lock(q);(WriteHeap{v2, ReadHeap{v2}*10};unlock(q))))
+};(no operation;(no operation;(no operation;(no operation;(lock(x);(print(ReadHeap{v1});(unlock(x);(lock(q);(print(ReadHeap{v2});unlock(q)))))))))))))|
+~ SYMBOL TABLE ~
+x -> 1
+q -> 0
+v2 -> ReferenceValue{451090768 -> int}
+v1 -> ReferenceValue{1006288561 -> int}
+
+~ OUTPUT ~
+
+~ FILE TABLE ~
+
+~ HEAP ~
+451090768 -> 30
+1006288561 -> 20
+
+~ LOCK TABLE ~
+{1=-1}
+
+ID: -2045891644
+
+~ EXECUTION STACK ~
+Fork{
+(Fork{
+(lock(x);(WriteHeap{v1, ReadHeap{v1}-1};unlock(x)))
+};(lock(x);(WriteHeap{v1, ReadHeap{v1}*10};unlock(x))))
+}|(newLock(q);(Fork{
+(Fork{
+(lock(q);(WriteHeap{v2, ReadHeap{v2}+5};unlock(q)))
+};(lock(q);(WriteHeap{v2, ReadHeap{v2}*10};unlock(q))))
+};(no operation;(no operation;(no operation;(no operation;(lock(x);(print(ReadHeap{v1});(unlock(x);(lock(q);(print(ReadHeap{v2});unlock(q))))))))))))|
+~ SYMBOL TABLE ~
+x -> 1
+q -> 0
+v2 -> ReferenceValue{451090768 -> int}
+v1 -> ReferenceValue{1006288561 -> int}
+
+~ OUTPUT ~
+
+~ FILE TABLE ~
+
+~ HEAP ~
+451090768 -> 30
+1006288561 -> 20
+
+~ LOCK TABLE ~
+{1=-1}
+
+ID: -2045891644
+
+~ EXECUTION STACK ~
+Fork{
+(Fork{
+(lock(x);(WriteHeap{v1, ReadHeap{v1}-1};unlock(x)))
+};(lock(x);(WriteHeap{v1, ReadHeap{v1}*10};unlock(x))))
+}|(newLock(q);(Fork{
+(Fork{
+(lock(q);(WriteHeap{v2, ReadHeap{v2}+5};unlock(q)))
+};(lock(q);(WriteHeap{v2, ReadHeap{v2}*10};unlock(q))))
+};(no operation;(no operation;(no operation;(no operation;(lock(x);(print(ReadHeap{v1});(unlock(x);(lock(q);(print(ReadHeap{v2});unlock(q))))))))))))|
+~ SYMBOL TABLE ~
+x -> 1
+q -> 0
+v2 -> ReferenceValue{451090768 -> int}
+v1 -> ReferenceValue{1006288561 -> int}
+
+~ OUTPUT ~
+
+~ FILE TABLE ~
+
+~ HEAP ~
+451090768 -> 30
+1006288561 -> 20
+
+~ LOCK TABLE ~
+{1=-1}
+
+ID: -2045891644
+
+~ EXECUTION STACK ~
+(newLock(q);(Fork{
+(Fork{
+(lock(q);(WriteHeap{v2, ReadHeap{v2}+5};unlock(q)))
+};(lock(q);(WriteHeap{v2, ReadHeap{v2}*10};unlock(q))))
+};(no operation;(no operation;(no operation;(no operation;(lock(x);(print(ReadHeap{v1});(unlock(x);(lock(q);(print(ReadHeap{v2});unlock(q))))))))))))|
+~ SYMBOL TABLE ~
+x -> 1
+q -> 0
+v2 -> ReferenceValue{451090768 -> int}
+v1 -> ReferenceValue{1006288561 -> int}
+
+~ OUTPUT ~
+
+~ FILE TABLE ~
+
+~ HEAP ~
+451090768 -> 30
+1006288561 -> 20
+
+~ LOCK TABLE ~
+{1=-1}
+
+ID: 0
+
+~ EXECUTION STACK ~
+(Fork{
+(lock(x);(WriteHeap{v1, ReadHeap{v1}-1};unlock(x)))
+};(lock(x);(WriteHeap{v1, ReadHeap{v1}*10};unlock(x))))|
+~ SYMBOL TABLE ~
+x -> 1
+q -> 0
+v2 -> ReferenceValue{451090768 -> int}
+v1 -> ReferenceValue{1006288561 -> int}
+
+~ OUTPUT ~
+
+~ FILE TABLE ~
+
+~ HEAP ~
+451090768 -> 30
+1006288561 -> 20
+
+~ LOCK TABLE ~
+{1=-1}
+
+ID: -2045891644
+
+~ EXECUTION STACK ~
+(newLock(q);(Fork{
+(Fork{
+(lock(q);(WriteHeap{v2, ReadHeap{v2}+5};unlock(q)))
+};(lock(q);(WriteHeap{v2, ReadHeap{v2}*10};unlock(q))))
+};(no operation;(no operation;(no operation;(no operation;(lock(x);(print(ReadHeap{v1});(unlock(x);(lock(q);(print(ReadHeap{v2});unlock(q))))))))))))|
+~ SYMBOL TABLE ~
+x -> 1
+q -> 0
+v2 -> ReferenceValue{451090768 -> int}
+v1 -> ReferenceValue{1006288561 -> int}
+
+~ OUTPUT ~
+
+~ FILE TABLE ~
+
+~ HEAP ~
+451090768 -> 30
+1006288561 -> 20
+
+~ LOCK TABLE ~
+{1=-1}
+
+ID: 0
+
+~ EXECUTION STACK ~
+(Fork{
+(lock(x);(WriteHeap{v1, ReadHeap{v1}-1};unlock(x)))
+};(lock(x);(WriteHeap{v1, ReadHeap{v1}*10};unlock(x))))|
+~ SYMBOL TABLE ~
+x -> 1
+q -> 0
+v2 -> ReferenceValue{451090768 -> int}
+v1 -> ReferenceValue{1006288561 -> int}
+
+~ OUTPUT ~
+
+~ FILE TABLE ~
+
+~ HEAP ~
+451090768 -> 30
+1006288561 -> 20
+
+~ LOCK TABLE ~
+{1=-1}
+
+ID: -2045891644
+
+~ EXECUTION STACK ~
+newLock(q)|(Fork{
+(Fork{
+(lock(q);(WriteHeap{v2, ReadHeap{v2}+5};unlock(q)))
+};(lock(q);(WriteHeap{v2, ReadHeap{v2}*10};unlock(q))))
+};(no operation;(no operation;(no operation;(no operation;(lock(x);(print(ReadHeap{v1});(unlock(x);(lock(q);(print(ReadHeap{v2});unlock(q)))))))))))|
+~ SYMBOL TABLE ~
+x -> 1
+q -> 0
+v2 -> ReferenceValue{451090768 -> int}
+v1 -> ReferenceValue{1006288561 -> int}
+
+~ OUTPUT ~
+
+~ FILE TABLE ~
+
+~ HEAP ~
+451090768 -> 30
+1006288561 -> 20
+
+~ LOCK TABLE ~
+{1=-1}
+
+ID: 0
+
+~ EXECUTION STACK ~
+Fork{
+(lock(x);(WriteHeap{v1, ReadHeap{v1}-1};unlock(x)))
+}|(lock(x);(WriteHeap{v1, ReadHeap{v1}*10};unlock(x)))|
+~ SYMBOL TABLE ~
+x -> 1
+q -> 0
+v2 -> ReferenceValue{451090768 -> int}
+v1 -> ReferenceValue{1006288561 -> int}
+
+~ OUTPUT ~
+
+~ FILE TABLE ~
+
+~ HEAP ~
+451090768 -> 30
+1006288561 -> 20
+
+~ LOCK TABLE ~
+{1=-1}
+

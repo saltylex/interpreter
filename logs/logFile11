@@ -1,0 +1,536 @@
+ID: 585090623
+
+~ EXECUTION STACK ~
+(Ref(int) a;(int v;(New{a, 20};(for(v=0; v<3; v=v+1) {Fork{
+(print(v);v=v*ReadHeap{a})
+}};print(ReadHeap{a})))))|
+~ SYMBOL TABLE ~
+
+~ OUTPUT ~
+
+~ FILE TABLE ~
+
+~ HEAP ~
+
+~ LOCK TABLE ~
+{}
+
+ID: 585090623
+
+~ EXECUTION STACK ~
+Ref(int) a|(int v;(New{a, 20};(for(v=0; v<3; v=v+1) {Fork{
+(print(v);v=v*ReadHeap{a})
+}};print(ReadHeap{a}))))|
+~ SYMBOL TABLE ~
+
+~ OUTPUT ~
+
+~ FILE TABLE ~
+
+~ HEAP ~
+
+~ LOCK TABLE ~
+{}
+
+ID: 585090623
+
+~ EXECUTION STACK ~
+Ref(int) a|(int v;(New{a, 20};(for(v=0; v<3; v=v+1) {Fork{
+(print(v);v=v*ReadHeap{a})
+}};print(ReadHeap{a}))))|
+~ SYMBOL TABLE ~
+
+~ OUTPUT ~
+
+~ FILE TABLE ~
+
+~ HEAP ~
+
+~ LOCK TABLE ~
+{}
+
+ID: 585090623
+
+~ EXECUTION STACK ~
+(int v;(New{a, 20};(for(v=0; v<3; v=v+1) {Fork{
+(print(v);v=v*ReadHeap{a})
+}};print(ReadHeap{a}))))|
+~ SYMBOL TABLE ~
+a -> ReferenceValue{0 -> int}
+
+~ OUTPUT ~
+
+~ FILE TABLE ~
+
+~ HEAP ~
+
+~ LOCK TABLE ~
+{}
+
+ID: 585090623
+
+~ EXECUTION STACK ~
+(int v;(New{a, 20};(for(v=0; v<3; v=v+1) {Fork{
+(print(v);v=v*ReadHeap{a})
+}};print(ReadHeap{a}))))|
+~ SYMBOL TABLE ~
+a -> ReferenceValue{0 -> int}
+
+~ OUTPUT ~
+
+~ FILE TABLE ~
+
+~ HEAP ~
+
+~ LOCK TABLE ~
+{}
+
+ID: 585090623
+
+~ EXECUTION STACK ~
+int v|(New{a, 20};(for(v=0; v<3; v=v+1) {Fork{
+(print(v);v=v*ReadHeap{a})
+}};print(ReadHeap{a})))|
+~ SYMBOL TABLE ~
+a -> ReferenceValue{0 -> int}
+
+~ OUTPUT ~
+
+~ FILE TABLE ~
+
+~ HEAP ~
+
+~ LOCK TABLE ~
+{}
+
+ID: 585090623
+
+~ EXECUTION STACK ~
+int v|(New{a, 20};(for(v=0; v<3; v=v+1) {Fork{
+(print(v);v=v*ReadHeap{a})
+}};print(ReadHeap{a})))|
+~ SYMBOL TABLE ~
+a -> ReferenceValue{0 -> int}
+
+~ OUTPUT ~
+
+~ FILE TABLE ~
+
+~ HEAP ~
+
+~ LOCK TABLE ~
+{}
+
+ID: 585090623
+
+~ EXECUTION STACK ~
+(New{a, 20};(for(v=0; v<3; v=v+1) {Fork{
+(print(v);v=v*ReadHeap{a})
+}};print(ReadHeap{a})))|
+~ SYMBOL TABLE ~
+a -> ReferenceValue{0 -> int}
+v -> 0
+
+~ OUTPUT ~
+
+~ FILE TABLE ~
+
+~ HEAP ~
+
+~ LOCK TABLE ~
+{}
+
+ID: 585090623
+
+~ EXECUTION STACK ~
+(New{a, 20};(for(v=0; v<3; v=v+1) {Fork{
+(print(v);v=v*ReadHeap{a})
+}};print(ReadHeap{a})))|
+~ SYMBOL TABLE ~
+a -> ReferenceValue{0 -> int}
+v -> 0
+
+~ OUTPUT ~
+
+~ FILE TABLE ~
+
+~ HEAP ~
+
+~ LOCK TABLE ~
+{}
+
+ID: 585090623
+
+~ EXECUTION STACK ~
+New{a, 20}|(for(v=0; v<3; v=v+1) {Fork{
+(print(v);v=v*ReadHeap{a})
+}};print(ReadHeap{a}))|
+~ SYMBOL TABLE ~
+a -> ReferenceValue{0 -> int}
+v -> 0
+
+~ OUTPUT ~
+
+~ FILE TABLE ~
+
+~ HEAP ~
+
+~ LOCK TABLE ~
+{}
+
+ID: 585090623
+
+~ EXECUTION STACK ~
+New{a, 20}|(for(v=0; v<3; v=v+1) {Fork{
+(print(v);v=v*ReadHeap{a})
+}};print(ReadHeap{a}))|
+~ SYMBOL TABLE ~
+a -> ReferenceValue{0 -> int}
+v -> 0
+
+~ OUTPUT ~
+
+~ FILE TABLE ~
+
+~ HEAP ~
+
+~ LOCK TABLE ~
+{}
+
+ID: 585090623
+
+~ EXECUTION STACK ~
+(for(v=0; v<3; v=v+1) {Fork{
+(print(v);v=v*ReadHeap{a})
+}};print(ReadHeap{a}))|
+~ SYMBOL TABLE ~
+a -> ReferenceValue{1274172809 -> int}
+v -> 0
+
+~ OUTPUT ~
+
+~ FILE TABLE ~
+
+~ HEAP ~
+1274172809 -> 20
+
+~ LOCK TABLE ~
+{}
+
+ID: 585090623
+
+~ EXECUTION STACK ~
+(for(v=0; v<3; v=v+1) {Fork{
+(print(v);v=v*ReadHeap{a})
+}};print(ReadHeap{a}))|
+~ SYMBOL TABLE ~
+a -> ReferenceValue{1274172809 -> int}
+v -> 0
+
+~ OUTPUT ~
+
+~ FILE TABLE ~
+
+~ HEAP ~
+1274172809 -> 20
+
+~ LOCK TABLE ~
+{}
+
+ID: 585090623
+
+~ EXECUTION STACK ~
+for(v=0; v<3; v=v+1) {Fork{
+(print(v);v=v*ReadHeap{a})
+}}|print(ReadHeap{a})|
+~ SYMBOL TABLE ~
+a -> ReferenceValue{1274172809 -> int}
+v -> 0
+
+~ OUTPUT ~
+
+~ FILE TABLE ~
+
+~ HEAP ~
+1274172809 -> 20
+
+~ LOCK TABLE ~
+{}
+
+ID: 585090623
+
+~ EXECUTION STACK ~
+for(v=0; v<3; v=v+1) {Fork{
+(print(v);v=v*ReadHeap{a})
+}}|print(ReadHeap{a})|
+~ SYMBOL TABLE ~
+a -> ReferenceValue{1274172809 -> int}
+v -> 0
+
+~ OUTPUT ~
+
+~ FILE TABLE ~
+
+~ HEAP ~
+1274172809 -> 20
+
+~ LOCK TABLE ~
+{}
+
+ID: 585090623
+
+~ EXECUTION STACK ~
+(v=0;While(v<3){
+(Fork{
+(print(v);v=v*ReadHeap{a})
+};v=v+1)})|print(ReadHeap{a})|
+~ SYMBOL TABLE ~
+a -> ReferenceValue{1274172809 -> int}
+v -> 0
+
+~ OUTPUT ~
+
+~ FILE TABLE ~
+
+~ HEAP ~
+1274172809 -> 20
+
+~ LOCK TABLE ~
+{}
+
+ID: 585090623
+
+~ EXECUTION STACK ~
+(v=0;While(v<3){
+(Fork{
+(print(v);v=v*ReadHeap{a})
+};v=v+1)})|print(ReadHeap{a})|
+~ SYMBOL TABLE ~
+a -> ReferenceValue{1274172809 -> int}
+v -> 0
+
+~ OUTPUT ~
+
+~ FILE TABLE ~
+
+~ HEAP ~
+1274172809 -> 20
+
+~ LOCK TABLE ~
+{}
+
+ID: 585090623
+
+~ EXECUTION STACK ~
+v=0|While(v<3){
+(Fork{
+(print(v);v=v*ReadHeap{a})
+};v=v+1)}|print(ReadHeap{a})|
+~ SYMBOL TABLE ~
+a -> ReferenceValue{1274172809 -> int}
+v -> 0
+
+~ OUTPUT ~
+
+~ FILE TABLE ~
+
+~ HEAP ~
+1274172809 -> 20
+
+~ LOCK TABLE ~
+{}
+
+ID: 585090623
+
+~ EXECUTION STACK ~
+v=0|While(v<3){
+(Fork{
+(print(v);v=v*ReadHeap{a})
+};v=v+1)}|print(ReadHeap{a})|
+~ SYMBOL TABLE ~
+a -> ReferenceValue{1274172809 -> int}
+v -> 0
+
+~ OUTPUT ~
+
+~ FILE TABLE ~
+
+~ HEAP ~
+1274172809 -> 20
+
+~ LOCK TABLE ~
+{}
+
+ID: 585090623
+
+~ EXECUTION STACK ~
+While(v<3){
+(Fork{
+(print(v);v=v*ReadHeap{a})
+};v=v+1)}|print(ReadHeap{a})|
+~ SYMBOL TABLE ~
+a -> ReferenceValue{1274172809 -> int}
+v -> 0
+
+~ OUTPUT ~
+
+~ FILE TABLE ~
+
+~ HEAP ~
+1274172809 -> 20
+
+~ LOCK TABLE ~
+{}
+
+ID: 585090623
+
+~ EXECUTION STACK ~
+While(v<3){
+(Fork{
+(print(v);v=v*ReadHeap{a})
+};v=v+1)}|print(ReadHeap{a})|
+~ SYMBOL TABLE ~
+a -> ReferenceValue{1274172809 -> int}
+v -> 0
+
+~ OUTPUT ~
+
+~ FILE TABLE ~
+
+~ HEAP ~
+1274172809 -> 20
+
+~ LOCK TABLE ~
+{}
+
+ID: 585090623
+
+~ EXECUTION STACK ~
+(Fork{
+(print(v);v=v*ReadHeap{a})
+};v=v+1)|While(v<3){
+(Fork{
+(print(v);v=v*ReadHeap{a})
+};v=v+1)}|print(ReadHeap{a})|
+~ SYMBOL TABLE ~
+a -> ReferenceValue{1274172809 -> int}
+v -> 0
+
+~ OUTPUT ~
+
+~ FILE TABLE ~
+
+~ HEAP ~
+1274172809 -> 20
+
+~ LOCK TABLE ~
+{}
+
+ID: 585090623
+
+~ EXECUTION STACK ~
+(Fork{
+(print(v);v=v*ReadHeap{a})
+};v=v+1)|While(v<3){
+(Fork{
+(print(v);v=v*ReadHeap{a})
+};v=v+1)}|print(ReadHeap{a})|
+~ SYMBOL TABLE ~
+a -> ReferenceValue{1274172809 -> int}
+v -> 0
+
+~ OUTPUT ~
+
+~ FILE TABLE ~
+
+~ HEAP ~
+1274172809 -> 20
+
+~ LOCK TABLE ~
+{}
+
+ID: 585090623
+
+~ EXECUTION STACK ~
+Fork{
+(print(v);v=v*ReadHeap{a})
+}|v=v+1|While(v<3){
+(Fork{
+(print(v);v=v*ReadHeap{a})
+};v=v+1)}|print(ReadHeap{a})|
+~ SYMBOL TABLE ~
+a -> ReferenceValue{1274172809 -> int}
+v -> 0
+
+~ OUTPUT ~
+
+~ FILE TABLE ~
+
+~ HEAP ~
+1274172809 -> 20
+
+~ LOCK TABLE ~
+{}
+
+ID: 585090623
+
+~ EXECUTION STACK ~
+Fork{
+(print(v);v=v*ReadHeap{a})
+}|v=v+1|While(v<3){
+(Fork{
+(print(v);v=v*ReadHeap{a})
+};v=v+1)}|print(ReadHeap{a})|
+~ SYMBOL TABLE ~
+a -> ReferenceValue{1274172809 -> int}
+v -> 0
+
+~ OUTPUT ~
+
+~ FILE TABLE ~
+
+~ HEAP ~
+1274172809 -> 20
+
+~ LOCK TABLE ~
+{}
+
+ID: 585090623
+
+~ EXECUTION STACK ~
+v=v+1|While(v<3){
+(Fork{
+(print(v);v=v*ReadHeap{a})
+};v=v+1)}|print(ReadHeap{a})|
+~ SYMBOL TABLE ~
+a -> ReferenceValue{1274172809 -> int}
+v -> 0
+
+~ OUTPUT ~
+
+~ FILE TABLE ~
+
+~ HEAP ~
+1274172809 -> 20
+
+~ LOCK TABLE ~
+{}
+
+ID: 0
+
+~ EXECUTION STACK ~
+(print(v);v=v*ReadHeap{a})|
+~ SYMBOL TABLE ~
+a -> ReferenceValue{1274172809 -> int}
+v -> 0
+
+~ OUTPUT ~
+
+~ FILE TABLE ~
+
+~ HEAP ~
+1274172809 -> 20
+
+~ LOCK TABLE ~
+{}
+

@@ -1,6 +1,5 @@
 package Repository;
 
-import Model.Exceptions.ExecutionException;
 import Model.State.PrgState;
 
 import java.io.BufferedWriter;
@@ -19,6 +18,10 @@ public class Repository implements IRepository{
         programStates = new LinkedList<>();
         currentPosition = 0;
         logFilePath = lfp;
+    }
+
+    public String getLogFilePath() {
+        return logFilePath;
     }
 
     @Override

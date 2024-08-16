@@ -1,11 +1,14 @@
 package Model.DataStructures;
 
+import Model.Exceptions.EvaluationException;
+
 import java.util.Dictionary;
 import java.util.Enumeration;
 import java.util.Map;
 
 public interface IDictionary<k, v> {
-
+    v lookUp(k key) throws EvaluationException;
+    boolean isDefined(k key);
     int size();
 
     boolean isEmpty();
@@ -25,6 +28,7 @@ public interface IDictionary<k, v> {
     IDictionary<k, v> copy();
 
     Map<k, v> getContent();
+    void update(k key, v value) throws EvaluationException;
 
 
 }

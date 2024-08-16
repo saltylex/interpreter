@@ -22,6 +22,7 @@ public class PrgState {
 
     public IDictionary<StringValue, BufferedReader> fileTable;
     public IHeap heap;
+    public ILockTable lockTable;
 
     private static final TreeSet<Integer> ids = new TreeSet<>();
     public int id;
@@ -32,6 +33,7 @@ public class PrgState {
         this.out = new ADTList<>();
         this.fileTable = new ADTDictionary<>();
         this.heap = new ADTHeap();
+        this.lockTable = new ADTLockTable();
         exeStack.push(originalProgram);
         this.id = newId();
     }
@@ -49,13 +51,21 @@ public class PrgState {
         return id;
     }
 
+    public int getId() {
+        return id;
+    }
 
-    public PrgState(IStack<IStatement> executionStack, IDictionary<String, IValue> symTable, IList<String> out, IDictionary<StringValue, BufferedReader> fileTable, IHeap heap) {
+    public PrgState(IStack<IStatement> executionStack, IDictionary<String, IValue> symTable, IList<String> out, IDictionary<StringValue, BufferedReader> fileTable, IHeap heap, ILockTable lockTable) {
         this.exeStack = executionStack;
         this.symTable = symTable;
         this.out = out;
         this.fileTable = fileTable;
         this.heap = heap;
+        this.lockTable = lockTable;
+    }
+
+    public ILockTable getLockTable() {
+        return lockTable;
     }
 
     public IStack<IStatement> getExeStack() {
@@ -141,11 +151,22 @@ public class PrgState {
 
     }
 
-    @Override
-    public String toString() {
-        return String.format("ID: %d\n\n~ EXECUTION STACK ~\n%s\n~ SYMBOL TABLE ~\n%s\n~ OUTPUT ~\n%s\n~ FILE TABLE ~\n%s\n~ HEAP ~\n%s\n", id, executionStackToString(), symTableToString(), outToString(), fileTableToString(), heapToString());
+    public String lockTableToString() throws EvaluationException {
+        StringBuilder lockTableStringBuilder = new StringBuilder();
+        for (int key : lockTable.keySet()) {
+            lockTableStringBuilder.append(String.format("%d -> %d\n", key, lockTable.get(key)));
+        }
+        return lockTableStringBuilder.toString();
     }
 
+    @Override
+    public String toString() {
+        return String.format("ID: %d\n\n~ EXECUTION STACK ~\n%s\n~ SYMBOL TABLE ~\n%s\n~ OUTPUT ~\n%s\n~ FILE TABLE ~\n%s\n~ HEAP ~\n%s\n~ LOCK TABLE ~\n%s\n", id, executionStackToString(), symTableToString(), outToString(), fileTableToString(), heapToString(), lockTable.toString());
+    }
+
+    public String programStateToString() throws EvaluationException {
+        return "Id: " + id + "\nExecution stack: \n" + executionStackToString() + "Symbol table: \n" + symTableToString() + "Output list: \n" + outToString() + "File table:\n" + fileTableToString() + "Heap memory:\n" + heapToString() + "Lock Table:\n" + lockTableToString();
+    }
 
     @Deprecated
     public PrgState oneStepSingleThreaded() throws StackException, ExecutionException, EvaluationException {

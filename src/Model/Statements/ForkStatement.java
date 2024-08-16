@@ -20,7 +20,7 @@ public class ForkStatement implements IStatement {
         IStack<IStatement> newExeStack = new ADTStack<>();
         newExeStack.push(statement);
         return new PrgState(newExeStack, state.getSymTable().copy(),
-                state.getOut(), state.getFileTable(), state.getHeap());
+                state.getOut(), state.getFileTable(), state.getHeap(), state.getLockTable());
     }
 
     @Override

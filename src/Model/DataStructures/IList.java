@@ -15,5 +15,5 @@ public interface IList<T> extends Iterable<T> {
 
     boolean isEmpty();
 
-    java.util.List<T> getList();
+    List<T> getList();
 }

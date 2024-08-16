@@ -68,11 +68,11 @@ public class NewView {
         new CompoundStatement(new PrintStatement(new HeapReadExpression(new VariableExpression("v"))),
         new CompoundStatement(new HeapNewStatement("v", new ValueExpression(new IntValue(30))),
                 new PrintStatement(new HeapReadExpression(new VariableExpression("v")))))));
-        c1 = new Controller(false);
-        c2 = new Controller(false);
-        c3 = new Controller(false);
-        c4 = new Controller(false);
-        c5 = new Controller(false);
+        c1 = new Controller("a.txt",false);
+        c2 = new Controller("a.txt",false);
+        c3 = new Controller("a.txt",false);
+        c4 = new Controller("a.txt",false);
+        c5 = new Controller("a.txt",false);
 
         c1.addProgram(s1);
         c2.addProgram(s2);
@@ -82,11 +82,11 @@ public class NewView {
 
         RunCommand r1, r2, r3, r4, r5;
 
-        r1 = new RunCommand("1", "int v; v=2; Print(v)", c1);
-        r2 = new RunCommand("2", "int a; int b; a=2+3*5; b=a+1; Print(b)", c2);
-        r3 = new RunCommand("3", "bool a; int v; a=true; (If a Then v=2 Else v=3); Print(v)", c3);
-        r4 = new RunCommand("4", "string varf; varf=\"test.in\"; openReadFile(varf); int varc; readFile(varf,varc); print(varc); readFile(varf,varc); print(varc); closeReadFile(varf)", c4);
-        r5 = new RunCommand("5", "Ref int v;new(v,20);Ref Ref int a; new(a,v); new(v,30);print(rH(rH(a))) -- error", c5);
+        r1 = new RunCommand(s1, "1", "int v; v=2; Print(v)", c1);
+        r2 = new RunCommand(s2, "2", "int a; int b; a=2+3*5; b=a+1; Print(b)", c2);
+        r3 = new RunCommand(s3, "3", "bool a; int v; a=true; (If a Then v=2 Else v=3); Print(v)", c3);
+        r4 = new RunCommand(s4, "4", "string varf; varf=\"test.in\"; openReadFile(varf); int varc; readFile(varf,varc); print(varc); readFile(varf,varc); print(varc); closeReadFile(varf)", c4);
+        r5 = new RunCommand(s5, "5", "Ref int v;new(v,20);Ref Ref int a; new(a,v); new(v,30);print(rH(rH(a))) -- error", c5);
         menu.addCommand(r1);
         menu.addCommand(r2);
         menu.addCommand(r3);
