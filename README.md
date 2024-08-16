@@ -48,6 +48,6 @@ This project is a robust interpreter for a custom programming language, leveragi
 2. Use the GUI to execute the program and observe the program state, heap, and outputs.
 3. Step through execution or run the entire program to see results.
 
-## License
+### Note
 
-This project is licensed under the GNU General Public License v3.0. See the [LICENSE](./LICENSE) file for more details.
+This project is old. It was written in 2022, and it is here only for showcase purposes. Check out my more recent projects!
